@@ -1,0 +1,131 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HospitalDAL", "HospitalDAL", "{080EDF3A-9224-40FE-87FE-84337BD888E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital", "Hospital\Hospital.csproj", "{2466D7C8-F4BC-4E41-81A7-74A723B15895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalIDAL", "HospitalIDAL\HospitalIDAL.csproj", "{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalDALSqlServer", "HospitalDALSqlServer\HospitalDALSqlServer.csproj", "{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalDALAccess", "HospitalDALAccess\HospitalDALAccess.csproj", "{B1B6EACD-697E-44B3-9F38-FF729F918144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalModel", "HospitalModel\HospitalModel.csproj", "{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBLL", "HospitalBLL\HospitalBLL.csproj", "{052FD61A-AEFF-48C6-BD6A-F3D73082454C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalDALMySql", "HospitalDALMySql\HospitalDALMySql.csproj", "{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalIDALOracle", "HospitalIDALOracle\HospitalIDALOracle.csproj", "{A8B83894-553F-4FA8-B730-5E28AE7B358A}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://348295407.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Hospital\\Hospital.csproj
+		SccProjectName1 = Hospital
+		SccLocalPath1 = Hospital
+		SccProjectUniqueName2 = HospitalBLL\\HospitalBLL.csproj
+		SccProjectName2 = HospitalBLL
+		SccLocalPath2 = HospitalBLL
+		SccProjectUniqueName3 = HospitalDALAccess\\HospitalDALAccess.csproj
+		SccProjectTopLevelParentUniqueName3 = Hospital.sln
+		SccProjectName3 = HospitalDALAccess
+		SccLocalPath3 = HospitalDALAccess
+		SccProjectUniqueName4 = HospitalDALMySql\\HospitalDALMySql.csproj
+		SccProjectTopLevelParentUniqueName4 = Hospital.sln
+		SccProjectName4 = HospitalDALMySql
+		SccLocalPath4 = HospitalDALMySql
+		SccProjectUniqueName5 = HospitalDALSqlServer\\HospitalDALSqlServer.csproj
+		SccProjectTopLevelParentUniqueName5 = Hospital.sln
+		SccProjectName5 = HospitalDALSqlServer
+		SccLocalPath5 = HospitalDALSqlServer
+		SccProjectUniqueName6 = HospitalIDAL\\HospitalIDAL.csproj
+		SccProjectTopLevelParentUniqueName6 = Hospital.sln
+		SccProjectName6 = HospitalIDAL
+		SccLocalPath6 = HospitalIDAL
+		SccProjectUniqueName7 = HospitalIDALOracle\\HospitalIDALOracle.csproj
+		SccProjectTopLevelParentUniqueName7 = Hospital.sln
+		SccProjectName7 = HospitalIDALOracle
+		SccLocalPath7 = HospitalIDALOracle
+		SccProjectUniqueName8 = HospitalModel\\HospitalModel.csproj
+		SccProjectName8 = HospitalModel
+		SccLocalPath8 = HospitalModel
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Debug|x86.Build.0 = Debug|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2466D7C8-F4BC-4E41-81A7-74A723B15895}.Release|x86.ActiveCfg = Release|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Debug|x86.ActiveCfg = Debug|x86
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Debug|x86.Build.0 = Debug|x86
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Release|x86.ActiveCfg = Release|x86
+		{B1B6EACD-697E-44B3-9F38-FF729F918144}.Release|x86.Build.0 = Release|x86
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Debug|x86.Build.0 = Debug|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A7F8D4-CD80-41F4-8A68-1E70FC9CEE82}.Release|x86.ActiveCfg = Release|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Debug|x86.Build.0 = Debug|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{052FD61A-AEFF-48C6-BD6A-F3D73082454C}.Release|x86.ActiveCfg = Release|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9}.Release|x86.ActiveCfg = Release|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BEB99F44-CF48-4F2E-8701-B8946A97D1FE} = {080EDF3A-9224-40FE-87FE-84337BD888E4}
+		{4F61F563-8DC1-4F6D-BF3E-B2B022C2FC0B} = {080EDF3A-9224-40FE-87FE-84337BD888E4}
+		{B1B6EACD-697E-44B3-9F38-FF729F918144} = {080EDF3A-9224-40FE-87FE-84337BD888E4}
+		{3FA9B9F8-4C43-48AD-BBB8-DADBB3E084A9} = {080EDF3A-9224-40FE-87FE-84337BD888E4}
+		{A8B83894-553F-4FA8-B730-5E28AE7B358A} = {080EDF3A-9224-40FE-87FE-84337BD888E4}
+	EndGlobalSection
+EndGlobal

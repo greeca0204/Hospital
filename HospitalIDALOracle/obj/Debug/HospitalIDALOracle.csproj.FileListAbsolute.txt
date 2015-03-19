@@ -1,0 +1,15 @@
+F:\project\Hospital\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.dll
+F:\project\Hospital\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.pdb
+F:\project\Hospital\HospitalIDALOracle\obj\Debug\ResolveAssemblyReference.cache
+F:\project\Hospital\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.dll
+F:\project\Hospital\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.pdb
+F:\project\C#\Hospital_v6.4\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.dll
+F:\project\C#\Hospital_v6.4\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.pdb
+F:\project\C#\Hospital_v6.4\HospitalIDALOracle\obj\Debug\ResolveAssemblyReference.cache
+F:\project\C#\Hospital_v6.4\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.dll
+F:\project\C#\Hospital_v6.4\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.pdb
+F:\project\C#\Hospital\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.dll
+F:\project\C#\Hospital\HospitalIDALOracle\bin\Debug\HospitalIDALOracle.pdb
+F:\project\C#\Hospital\HospitalIDALOracle\obj\Debug\ResolveAssemblyReference.cache
+F:\project\C#\Hospital\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.dll
+F:\project\C#\Hospital\HospitalIDALOracle\obj\Debug\HospitalIDALOracle.pdb

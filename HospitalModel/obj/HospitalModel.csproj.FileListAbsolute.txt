@@ -1,0 +1,5 @@
+D:\T35\2010-3-15\HospitalModel\HospitalModel\obj\Debug\ResolveAssemblyReference.cache
+D:\T35\2010-3-15\HospitalModel\HospitalModel\bin\Debug\HospitalModel.dll
+D:\T35\2010-3-15\HospitalModel\HospitalModel\bin\Debug\HospitalModel.pdb
+D:\T35\2010-3-15\HospitalModel\HospitalModel\obj\Debug\HospitalModel.dll
+D:\T35\2010-3-15\HospitalModel\HospitalModel\obj\Debug\HospitalModel.pdb

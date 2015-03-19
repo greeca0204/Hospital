@@ -1,0 +1,17 @@
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalBLL.dll
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalBLL.pdb
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalIDAL.dll
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalModel.dll
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalIDAL.pdb
+D:\VS2010\Hospital\HospitalBLL\bin\Release\HospitalModel.pdb
+D:\VS2010\Hospital\HospitalBLL\obj\Release\ResolveAssemblyReference.cache
+D:\VS2010\Hospital\HospitalBLL\obj\Release\HospitalBLL.dll
+D:\VS2010\Hospital\HospitalBLL\obj\Release\HospitalBLL.pdb
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalBLL.dll
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalBLL.pdb
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalIDAL.dll
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalModel.dll
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalIDAL.pdb
+F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalModel.pdb
+F:\project\C#\Hospital\HospitalBLL\obj\Release\HospitalBLL.dll
+F:\project\C#\Hospital\HospitalBLL\obj\Release\HospitalBLL.pdb

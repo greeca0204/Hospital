@@ -1,0 +1,258 @@
+<dantest>
+<patient_info>
+<lname>何</lname>
+<fname>向东</fname>
+<mname></mname>
+<address></address>
+<address1></address1>
+<city></city>
+<province></province>
+<postcode></postcode>
+<country></country>
+<tel></tel>
+<email></email>
+<profession></profession>
+<organization></organization>
+<department></department>
+<patientcomment1></patientcomment1>
+<age>27</age>
+<type>0</type>
+<sex>1</sex>
+<weight>66</weight>
+<height>161</height>
+<traininglevel>0</traininglevel>
+<vo2max>0</vo2max>
+<hr_rest>0</hr_rest>
+<hr_max>0</hr_max>
+<hr_max_ae>0</hr_max_ae>
+<birthdate>5/8/1986</birthdate>
+<birthdate_Day>5</birthdate_Day>
+<birthdate_Month>8</birthdate_Month>
+<birthdate_Year>1986</birthdate_Year>
+<mrn></mrn>
+<idn></idn>
+<patientcode></patientcode>
+<usercode></usercode>
+<userprofile>0</userprofile>
+</patient_info>
+<result_info>
+<resultcomment1></resultcomment1>
+<resultcomment2></resultcomment2>
+<resultcomment3></resultcomment3>
+<mtest>1</mtest>
+<test>1</test>
+<test1>1</test1>
+<test2>1</test2>
+<type>0</type>
+<date>8/7/2014 9:26</date>
+<date_Day>8</date_Day>
+<date_Month>7</date_Month>
+<date_Year>2014</date_Year>
+<date_Hour>9</date_Hour>
+<date_Minute>26</date_Minute>
+<whenisdone></whenisdone>
+<patientcondition></patientcondition>
+<patientcondition1></patientcondition1>
+<sessioncode></sessioncode>
+<resultcode></resultcode>
+<param></param>
+<param1></param1>
+<doctorcomments></doctorcomments>
+<collectoptions></collectoptions>
+<testprocedure></testprocedure>
+<options></options>
+<systeminfo></systeminfo>
+<hw_sn>48544950495354544849514848514852</hw_sn>
+<sw_sn></sw_sn>
+<hw>5</hw>
+<hw1>1</hw1>
+<collectdata></collectdata>
+<symptoms></symptoms>
+<medicaments></medicaments>
+<!--
+<other1>pcode=16&pcode1=1&pcode2=1&ver=5&ver1=2&ver2=&ver3=5.2.5205.33235&sn1=DT520HJJ&sn2=DFDGH7JJ&nbc=9351347029900130011003216210272001200190472176500910014001063451022037300150014593525470279001300110032234102320012001904721765009100140010634510220373001500145</other1>
+-->
+<other2></other2>
+<other3></other3>
+<other4></other4>
+</result_info>
+<results>
+<ptg>
+<item code="PTG-AI" type="1" name="AI" step="0">-0.0729569273098698</item>
+<item code="PTG-TIME" type="1" name="Duration" step="0">302</item>
+<item code="PTG-b/a" type="1" name="b/a" step="0">-0.116526059106262</item>
+<item code="PTG-c/a" type="1" name="c/a" step="0">-0.0245659722242559</item>
+<item code="PTG-d/a" type="1" name="d/a" step="0">-0.259959967086381</item>
+<item code="PTG-e/a" type="1" name="e/a" step="0">-0.101515691613443</item>
+<item code="PTG-PULSE" type="1" name="Pulse" step="0">78</item>
+<item code="PTG-PULSEMIN" type="1" name="Pulse Min" step="0">44</item>
+<item code="PTG-PULSEMAX" type="1" name="Pulse Max" step="0">107</item>
+<item code="PTG-X" type="1" name="X" step="0">764</item>
+<item code="PTG-NRR" type="1" name="Number RR" step="0">395</item>
+<item code="PTG-PH" type="1" name="Pulse Height" step="0">63</item>
+<item code="PTG-RI" type="1" name="RI" step="0">0.671379938558912</item>
+<item code="PTG-SI" type="1" name="SI" step="0">7.66666666666667</item>
+<item code="PTG-SPTI" type="1" name="SPTI" step="0">0.723919427973402</item>
+<item code="PTG-DPTI" type="1" name="DPTI" step="0">0.276080572026598</item>
+<item code="PTG-C1" type="1" name="C1" step="0">10.7295692730987</item>
+<item code="PTG-C2" type="1" name="C2" step="0">6.98235136101268</item>
+<item code="PTG-bcde/a" type="1" name="(b-c-d-e)/a" step="0">-0.502567690030342</item>
+<item code="PTG-EEI" type="1" name="EEI" step="0">0.502112090935621</item>
+<item code="PTG-DEI" type="1" name="DEI" step="0">0.475259415517633</item>
+<item code="PTG-DDI" type="1" name="DDI" step="0">0.442677258200202</item>
+<item code="PTG-APGType" type="1" name="APG Type" step="0">1</item>
+<item code="PTG-DPTI/SPTI" type="1" name="DPTI/SPTI" step="0">0.38136919850249</item>
+<item code="PTG-BPSYS" type="1" name="Systolic Blood Pressure" step="0">105.653069750395</item>
+<item code="PTG-BPDIA" type="1" name="Diastolic Blood Pressure" step="0">74.3225034142201</item>
+<item code="PTG-SpO2" type="1" name="SpO2" step="0">0</item>
+<item code="PTG-PulseTransitTime" type="1" name="Pulse Transit Time" step="0">0</item>
+<item code="PTG-PWV" type="1" name="PWV" step="0">0</item>
+<item code="PTG-EF" type="1" name="Ejection Fraction" step="0">64.787902764849</item>
+<item code="PTG-Etc" type="1" name="Estimated Cardiac Ejection Time" step="0">320</item>
+<item code="PTG-SDPTG" type="1" name="SDPTG" step="0">0.269515571817819</item>
+<item code="PTG-SVolume" type="1" name="Stroke Volume" step="0">62.6611326723506</item>
+<item code="PTG-PP" type="1" name="Pulse Pressure" step="0">31.3305663361753</item>
+<item code="PTG-SVI" type="1" name="Stroke Volume Index" step="0">36.4724204388012</item>
+<item code="PTG-Q" type="1" name="Cardiac Output" step="0">4.88756834844335</item>
+<item code="PTG-CI" type="1" name="Cardiac Index" step="0">2.84484879422649</item>
+<item code="PTG-BSA" type="1" name="Body Surface Area" step="0">1.71804152064689</item>
+<item code="PTG-PPV" type="1" name="Pulse Pressure Variation" step="0">1.71804152064689</item>
+<item code="PTG-SPV" type="1" name="Systolic Pressure Variation" step="0">1.71804152064689</item>
+<item code="PTG-SVR" type="1" name="Systemic Vascular Resistance" step="0">1371.087126431</item>
+<item code="PTG-MAP" type="1" name="Mean Arterial Pressure" step="0">84.7660255262786</item>
+<item code="PTG-BV" type="1" name="Blood Volume" step="0">4.2598167989</item>
+<item code="PTG-PTGSTEP" type="1" name="PTGStep" step="0">5</item>
+<item code="PTG-PTGYSTEP" type="1" name="PTGYStep" step="0">0.108449612403101</item>
+<item code="PTG-EEI-Comments" type="3" name="Comments" step="0">正常血液循环</item>
+<item code="PTG-DDI-Comments" type="3" name="Comments" step="0">正常血液循环</item>
+<item code="PTG-DEI-Comments" type="3" name="Comments" step="0">正常的血液循环</item>
+<item code="PTG-AI-Comments" type="3" name="Comments" step="0">AI是一种动脉硬度的测量，它提供了有关小动脉的更多讯息。 AI是与脉波速度（PWV）和血压（BP）有正相关的关系。</item>
+</ptg>
+<ecg>
+<item code="NRR" type="2" name="Number R-R intervals" step="0">398</item>
+<item code="ECG-TIME" type="1" name="Duration" step="0">302</item>
+<item code="PULSE" type="1" name="Pulse" step="0">79</item>
+<item code="ARTIFACTS" type="2" name="Artifacts" step="0">0</item>
+<item code="ECG-EXSV" type="2" name="Supra-Ventricular Extrasystoles" step="0">0</item>
+<item code="ECG-EXV" type="2" name="Ventricular Extrasystoles" step="0">0</item>
+<item code="ECG-VentricularExtrasystoleType1" type="2" name="Ventricular Extrasystole" step="0">0</item>
+<item code="ECG-AtrialExtrasystole" type="2" name="Supra-Ventricular(Atrial) Extrasystole" step="0">0</item>
+<item code="ECG-AVConductionFirstDegree" type="2" name="AV Conduction - First degree AV block" step="0">0</item>
+<item code="ECG-AVConductionSecondDegree" type="2" name="AV Conduction - Second degree AV block" step="0">0</item>
+<item code="ECG-VentricularExtrasystoleType2" type="2" name="Ventricular Extrasystole Type2" step="0">0</item>
+<item code="ECG-P" type="1" name="P wave" step="0">52</item>
+<item code="ECG-Q" type="1" name="Q wave" step="0">24</item>
+<item code="ECG-R" type="1" name="R wave" step="0">59</item>
+<item code="ECG-S" type="1" name="S wave" step="0">30</item>
+<item code="ECG-T" type="1" name="T wave" step="0">143</item>
+<item code="ECG-PV" type="1" name="P max value" step="0">-0.0700463215258856</item>
+<item code="ECG-QV" type="1" name="Q max value" step="0">0.420118927973199</item>
+<item code="ECG-RV" type="1" name="R max value" step="0">-0.262594639865997</item>
+<item code="ECG-SV" type="1" name="S max value" step="0">-0.450057094878254</item>
+<item code="ECG-TV" type="1" name="T max value" step="0">-0.0602815789473684</item>
+<item code="ECG-JV" type="1" name="J max value" step="0">0.213284757118928</item>
+<item code="ECG-BV" type="1" name="Baseline value" step="0">5.19385092127303</item>
+<item code="ECG-PR" type="1" name="PR interval" step="0">122</item>
+<item code="ECG-PRseg" type="1" name="PR segment" step="0">70</item>
+<item code="ECG-STint" type="1" name="ST interval" step="0">307</item>
+<item code="ECG-STseg" type="1" name="ST segment" step="0">164</item>
+<item code="ECG-QRS" type="1" name="QRS" step="0">78.914447236181</item>
+<item code="ECG-QT" type="1" name="QT" step="0">364.083094555874</item>
+<item code="ECG-QTc" type="1" name="QTc" step="0">419.777228101554</item>
+<item code="ECG-Vx" type="1" name="Vx" step="0">0.47806367123893</item>
+</ecg>
+<autonomicbalance>
+<item code="RESTING-TIME" type="1" name="Duration" step="0">301</item>
+<item code="RESTING-PULSE" type="1" name="HeartRate" step="0">79</item>
+<item code="RESTING-PULSEMIN" type="1" name="HR Min" step="0">67</item>
+<item code="RESTING-PULSEMAX" type="1" name="HR Max" step="0">99</item>
+<item code="RESTING-ARTIFACTS" type="2" name="Artifacts" step="0">1</item>
+<item code="RESTING-X" type="1" name="X" step="0">756</item>
+<item code="RESTING-NRR" type="2" name="HeartBeats" step="0">398</item>
+<item code="RESTING-SDNN" type="1" name="SD" step="0">55.3534555180015</item>
+<item code="RESTING-SDNN5" type="1" name="SDNN (long)" step="0">46.1691427642938</item>
+<item code="RESTING-SDSD" type="1" name="SDSD" step="0">31.5104397966453</item>
+<item code="RESTING-SD1" type="1" name="SD1" step="0">22.2812456583784</item>
+<item code="RESTING-SD2" type="1" name="SD2" step="0">75.0436950547996</item>
+<item code="RESTING-SD1/SD2" type="1" name="SD1/SD2" step="0">0.296910295290068</item>
+<item code="RESTING-VLF" type="1" name="VLF Power" step="0">115.627414677088</item>
+<item code="RESTING-LF" type="1" name="LF Power" step="0">299.387819441332</item>
+<item code="RESTING-HF" type="1" name="HF Power" step="0">128.545192900033</item>
+<item code="RESTING-PMHZ" type="1" name="Max Power Hz" step="0">0.0775049603174603</item>
+<item code="RESTING-TP" type="1" name="Total Power" step="0">1399.42217990962</item>
+<item code="RESTING-rmsSD5" type="2" name="rmsSD (long)" step="0">62.7204828932222</item>
+<item code="RESTING-PNN50" type="2" name="pNN50" step="0">34</item>
+<item code="RESTING-LF/HF" type="2" name="LF/HF" step="0">2.32904718322809</item>
+<item code="RESTING-BPSYS" type="1" name="Systolic Blood Pressure" step="0">116.671035031043</item>
+<item code="RESTING-BPDIA" type="1" name="Diastolic Blood Pressure" step="0">76.8560096450999</item>
+<item code="RESTING-SpO2" type="1" name="SpO2" step="0">0</item>
+<item code="RESTING-DMF" type="1" name="DMF" step="0">0.15</item>
+<item code="RESTING-LFA" type="1" name="LFa" step="0">2.80404275240253</item>
+<item code="RESTING-RFA" type="1" name="RFa" step="0">1.91200904519201</item>
+<item code="RESTING-TPA" type="1" name="TPa" step="0">19.6159209622683</item>
+<item code="RESTING-LFA/RFA" type="1" name="LFa/RFa" step="0">1.46654261885092</item>
+<item code="RESTING-AutonomicTone" type="1" name="Autonomic Tone" step="0">167.308442381833</item>
+<item code="RESTING-AutonomicBalance" type="1" name="Autonomic Balance" step="0">42.9861478358006</item>
+<item code="RESTING-Comments" type="3" name="Comments" step="0">交感神经和副交感神经张力位于正常值边缘水平; 
+</item>
+</autonomicbalance>
+<stresstest>
+<item code="ST-PSC" type="1" name="Physical Stress Coefficient" step="0">0.597875900482735</item>
+<item code="ST-PSCA" type="1" name="Physical Stress Coefficient Age Related" step="0">0.8</item>
+<item code="ST-PSI" type="1" name="Physical Stress Index" step="0">-0.202124099517265</item>
+<item code="ST-MSC" type="1" name="Mental Stress Coefficient" step="0">1.07940946279034</item>
+<item code="ST-MSA" type="1" name="Mental Stress Coefficient Age Related" step="0">0.8</item>
+<item code="ST-MSI" type="1" name="Mental Stress Index" step="0">0.279409462790339</item>
+<item code="ST-OSC" type="1" name="Overall Stress Coefficient" step="0">0.838642681636537</item>
+<item code="ST-OSI" type="1" name="Overall Stress Index" step="0">0.0386426816365371</item>
+<item code="ST-FA" type="2" name="Functional Age" step="0">29</item>
+<item code="ST-FAD" type="2" name="Functional Age Difference" step="0">2</item>
+<item code="ST-HR" type="1" name="Health Risk Factor" step="0">44.058474857389</item>
+<item code="ST-TDI" type="1" name="Time Domain Index" step="0">47.4250143801662</item>
+<item code="TIME" type="1" name="Duration" step="0">301</item>
+<item code="PULSE" type="1" name="Pulse" step="0">79</item>
+<item code="PULSEMIN" type="1" name="Pulse Min" step="0">67</item>
+<item code="PULSEMAX" type="1" name="Pulse Max" step="0">99</item>
+<item code="X" type="1" name="X" step="0">756</item>
+<item code="NRR" type="2" name="Number RR" step="0">398</item>
+<item code="ARTIFACTS" type="2" name="Artifacts" step="0">1</item>
+<item code="ST-TIME" type="1" name="Duration" step="0">301</item>
+<item code="ST-PULSE" type="1" name="HeartRate" step="0">79</item>
+<item code="ST-PULSEMIN" type="1" name="HR Min" step="0">67</item>
+<item code="ST-PULSEMAX" type="1" name="HR Max" step="0">99</item>
+<item code="ST-ARTIFACTS" type="2" name="Artifacts" step="0">1</item>
+<item code="ST-X" type="1" name="X" step="0">756</item>
+<item code="ST-NRR" type="2" name="HeartBeats" step="0">398</item>
+<item code="ST-SDNN" type="1" name="SD" step="0">55.3534555180015</item>
+<item code="ST-SDNN5" type="1" name="SDNN (long)" step="0">46.1691427642938</item>
+<item code="ST-SDSD" type="1" name="SDSD" step="0">31.5104397966453</item>
+<item code="ST-SD1" type="1" name="SD1" step="0">22.2812456583784</item>
+<item code="ST-SD2" type="1" name="SD2" step="0">75.0436950547996</item>
+<item code="ST-SD1/SD2" type="1" name="SD1/SD2" step="0">0.296910295290068</item>
+<item code="ST-VLF" type="1" name="VLF Power" step="0">115.627414677088</item>
+<item code="ST-LF" type="1" name="LF Power" step="0">299.387819441332</item>
+<item code="ST-HF" type="1" name="HF Power" step="0">128.545192900033</item>
+<item code="ST-PMHZ" type="1" name="Max Power Hz" step="0">0.0775049603174603</item>
+<item code="ST-TP" type="1" name="Total Power" step="0">1399.42217990962</item>
+<item code="ST-rmsSD5" type="2" name="rmsSD (long)" step="0">62.7204828932222</item>
+<item code="ST-PNN50" type="2" name="pNN50" step="0">34</item>
+<item code="ST-LF/HF" type="2" name="LF/HF" step="0">2.32904718322809</item>
+<item code="ST-FDI" type="1" name="Frequency Domain Index" step="0">1399.42217990962</item>
+<item code="ST-PSI-Comments" type="3" name="Comments" step="0">该分数处于平均值范围，表示较低的生理压力，在最近的这段时间压力对您的生理平衡没有什么影响，生理压力的负面影响是有限的。</item>
+<item code="ST-MSI-Comments" type="3" name="Comments" step="0">分数是平均的，它表示低的心理压力，压力在过去的一段时间里对您的精神健康没有什么影响，心理压力的负面影响是很小的</item>
+</stresstest>
+<correlation>
+<item code="CR-R" type="1" name="Correlation Index (r)" step="0">-0.437191811158084</item>
+<item code="CR-T" type="1" name="Significance (t)" step="0">-119.482209058957</item>
+<item code="CR-RA" type="1" name="Regression a" step="0">408.140282351313</item>
+<item code="CR-RB" type="1" name="Regression b" step="0">-2.19883658922459</item>
+<item code="CR-VLF" type="1" name="VLF Power" step="0">6710.17804659005</item>
+<item code="CR-LF" type="1" name="LF Power" step="0">40344.9536393384</item>
+<item code="CR-HF" type="1" name="HF Power" step="0">14237.4262633981</item>
+<item code="CR-TCP" type="1" name="Total Correlation Power" step="0">545353655.914885</item>
+<item code="CR-LF/HF" type="2" name="LF/HF" step="0">2.8337252037651</item>
+</correlation>
+<test_metabolic>
+</test_metabolic>
+</results>
+</dantest>

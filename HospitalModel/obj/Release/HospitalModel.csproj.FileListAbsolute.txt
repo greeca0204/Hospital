@@ -1,0 +1,9 @@
+D:\VS2010\Hospital\HospitalModel\bin\Release\HospitalModel.dll
+D:\VS2010\Hospital\HospitalModel\bin\Release\HospitalModel.pdb
+D:\VS2010\Hospital\HospitalModel\obj\Release\ResolveAssemblyReference.cache
+D:\VS2010\Hospital\HospitalModel\obj\Release\HospitalModel.dll
+D:\VS2010\Hospital\HospitalModel\obj\Release\HospitalModel.pdb
+F:\project\C#\Hospital\HospitalModel\bin\Release\HospitalModel.dll
+F:\project\C#\Hospital\HospitalModel\bin\Release\HospitalModel.pdb
+F:\project\C#\Hospital\HospitalModel\obj\Release\HospitalModel.dll
+F:\project\C#\Hospital\HospitalModel\obj\Release\HospitalModel.pdb

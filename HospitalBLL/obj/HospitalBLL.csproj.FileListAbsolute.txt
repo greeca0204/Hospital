@@ -1,0 +1,9 @@
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\obj\Debug\ResolveAssemblyReference.cache
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalBLL.dll
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalBLL.pdb
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalDAL.dll
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalModel.dll
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalDAL.pdb
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\bin\Debug\HospitalModel.pdb
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\obj\Debug\HospitalBLL.dll
+D:\T35\2010-3-15\HospitalBLL\HospitalBLL\obj\Debug\HospitalBLL.pdb
