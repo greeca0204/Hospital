@@ -107,7 +107,7 @@ namespace Hospital.Access
         //对某个病人的心理测试进行统计
         public List<Statistics> GetStatisticsInfoByUid(int uid)
         {
-            string sql = "select A.tid as tid,tName,count(score) as cnt,avg(score) as avgv,max(score) as maxv,min(score) as minv from tbl_patientDetail as A inner join tbl_testpaper as B on A.tid=B.tid where A.uid=@uid group by A.tid,tName";
+            string sql = "select A.tid as tid,B.tName,count(score) as cnt,avg(score) as avgv,max(score) as maxv,min(score) as minv from tbl_patientDetail as A inner join tbl_testpaper as B on A.tid=B.tid where A.uid=@uid group by A.tid,B.tName";
             List<Statistics> list = null;
             con.Open();
             using (OleDbCommand cmd = new OleDbCommand(sql, con))

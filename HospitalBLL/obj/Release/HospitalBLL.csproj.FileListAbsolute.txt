@@ -15,3 +15,4 @@ F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalIDAL.pdb
 F:\project\C#\Hospital\HospitalBLL\bin\Release\HospitalModel.pdb
 F:\project\C#\Hospital\HospitalBLL\obj\Release\HospitalBLL.dll
 F:\project\C#\Hospital\HospitalBLL\obj\Release\HospitalBLL.pdb
+F:\project\C#\Hospital\HospitalBLL\obj\Release\HospitalBLL.csprojResolveAssemblyReference.cache

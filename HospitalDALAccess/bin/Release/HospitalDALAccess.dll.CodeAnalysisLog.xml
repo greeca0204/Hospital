@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Namespaces>
+  <Namespace Name="Hospital">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">考虑将“Hospital”中定义的类型与另一个命名空间合并。</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="F:\project\C#\Hospital\HospitalDALAccess\bin\x86\Release\HospitalDALAccess.dll">
+   <Modules>
+    <Module Name="hospitaldalaccess.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">用强名称密钥对 'HospitalDALAccess.dll' 进行签名。</Issue>
+      </Message>
+      <Message Id="DAL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+       <Issue Name="Assembly" Certainty="85" Level="Error">更正程序集名称 'HospitalDALAccess.dll' 中“DAL”的大小写，将其改为“Dal”。</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">使用 CLSCompliant(true)来标记 'HospitalDALAccess.dll'，因为它公开外部可见的类型。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Hospital">
+       <Types>
+        <Type Name="AccessDALFactory" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="DAL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+           <Issue Name="Type" Certainty="85" Level="Error">更正类型名称 'AccessDALFactory' 中“DAL”的大小写，将其改为“Dal”。</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Hospital.Access">
+       <Types>
+        <Type Name="AccessAcountService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessAcountService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessAcountService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetAccount(System.Int32,System.Double)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="33">更改 'AccessAcountService.GetAccount(int, double)' 中的 'List&lt;Acount&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="52">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccount(int, double)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="53">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccount(int, double)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="49">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccount(int, double)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="51">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccount(int, double)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="54">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccount(int, double)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAccountAddAge(System.Int32,System.Double,System.Int32,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="143">更改 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的 'List&lt;Acount&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="164">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="165">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="161">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="163">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="166">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddAge(int, double, int, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAccountAddName(System.Int32,System.Double,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="68">更改 'AccessAcountService.GetAccountAddName(int, double, string)' 中的 'List&lt;Acount&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="2#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="68">在成员 'AccessAcountService.GetAccountAddName(int, double, string)' 中，将参数名称 'nameItem' 改为 'name'，使其与已在 'IAcountService.GetAccountAddName(int, double, string)' 中声明的标识符匹配。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="90">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddName(int, double, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="91">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddName(int, double, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="87">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddName(int, double, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="89">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddName(int, double, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="92">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddName(int, double, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAccountAddSex(System.Int32,System.Double,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="107">更改 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的 'List&lt;Acount&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="127">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="128">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="124">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="126">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="129">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetAccountAddSex(int, double, string, string)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetName(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="257">更改 'AccessAcountService.GetName(int)' 中的 'List&lt;string&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="269">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetName(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNum(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessAcountService.cs" Line="191">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessAcountService.GetNum(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessDoctorService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessDoctorService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessDoctorService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#DeleteDoctorInfo(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="242">修改 'AccessDoctorService.DeleteDoctorInfo(int)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAllDoctor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="133">修改 'AccessDoctorService.GetAllDoctor()' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="106">更改 'AccessDoctorService.GetAllDoctor()' 中的 'List&lt;Doctor&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="121">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetAllDoctor()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="124">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetAllDoctor()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="125">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetAllDoctor()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDoctor(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="56">修改 'AccessDoctorService.GetDoctor(string, string)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="47">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetDoctor(string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="48">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetDoctor(string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="49">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetDoctor(string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDoctorById(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="92">修改 'AccessDoctorService.GetDoctorById(int)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="84">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetDoctorById(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="85">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessDoctorService.GetDoctorById(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InsertDoctorInfo(Hospital.Doctor)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="161">修改 'AccessDoctorService.InsertDoctorInfo(Doctor)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="154">在外部可见方法 'AccessDoctorService.InsertDoctorInfo(Doctor)' 中，请在使用参数“doctor”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateDoctorInfo(Hospital.Doctor)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="190">修改 'AccessDoctorService.UpdateDoctorInfo(Doctor)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="182">在外部可见方法 'AccessDoctorService.UpdateDoctorInfo(Doctor)' 中，请在使用参数“doctor”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateDoctorInfoExceptPsw(Hospital.Doctor)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="217">修改 'AccessDoctorService.UpdateDoctorInfoExceptPsw(Doctor)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessDoctorService.cs" Line="210">在外部可见方法 'AccessDoctorService.UpdateDoctorInfoExceptPsw(Doctor)' 中，请在使用参数“doctor”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessHeartRateService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessHeartRateService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessHeartRateService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetOneHeartRate(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="59">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="45">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="46">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="47">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="48">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="49">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="50">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="51">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="52">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="53">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="54">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="55">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="56">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="57">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="58">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="43">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="44">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="60">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="61">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="62">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="63">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="64">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="65">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="66">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="67">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="68">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="69">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRate(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOneHeartRateByUid(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="83">更改 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的 'List&lt;HeartRate&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="83">在成员 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中，将参数名称 'userid' 改为 'uid'，使其与已在 'IHeartRateService.GetOneHeartRateByUid(int)' 中声明的标识符匹配。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="112">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="98">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="99">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="100">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="101">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="102">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="103">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="104">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="105">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="106">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="107">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="108">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="109">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="110">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="111">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="96">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="97">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="113">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="114">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="115">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="116">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="117">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="118">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="119">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="120">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="121">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="122">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessHeartRateService.GetOneHeartRateByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InsertHeartRate(Hospital.HeartRate)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="142">在外部可见方法 'AccessHeartRateService.InsertHeartRate(HeartRate)' 中，请在使用参数“heartRate”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateHeartRate(Hospital.HeartRate)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHeartRateService.cs" Line="182">在外部可见方法 'AccessHeartRateService.UpdateHeartRate(HeartRate)' 中，请在使用参数“heartRate”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessHospitalService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessHospitalService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessHospitalService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#UpdateHospitalInfo(Hospital.Hospital)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessHospitalService.cs" Line="62">在外部可见方法 'AccessHospitalService.UpdateHospitalInfo(Hospital)' 中，请在使用参数“hospital”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessOfficeService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessOfficeService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessOfficeService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetAllOffice()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="57">更改 'AccessOfficeService.GetAllOffice()' 中的 'List&lt;Office&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="69">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOfficeService.GetAllOffice()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="71">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOfficeService.GetAllOffice()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOfficeById(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="33">在成员 'AccessOfficeService.GetOfficeById(int)' 中，将参数名称 'oId' 改为 'oid'，使其与已在 'IOfficeService.GetOfficeById(int)' 中声明的标识符匹配。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="44">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOfficeService.GetOfficeById(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOfficeCnt()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="125">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOfficeService.GetOfficeCnt()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InsertOffice(Hospital.Office)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="90">在外部可见方法 'AccessOfficeService.InsertOffice(Office)' 中，请在使用参数“office”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdateOffice(Hospital.Office)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOfficeService.cs" Line="105">在外部可见方法 'AccessOfficeService.UpdateOffice(Office)' 中，请在使用参数“office”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessOptionService" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">在 'AccessOptionService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetOptions(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="77">修改 'AccessOptionService.GetOptions(int)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToChar(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="67">由于 'Convert.ToChar(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOptionService.GetOptions(int)' 中的此调用替换为对 'Convert.ToChar(object, IFormatProvider)' 的调用。如果 'Convert.ToChar(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="69">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOptionService.GetOptions(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="65">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOptionService.GetOptions(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="66">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOptionService.GetOptions(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessOptionService.cs" Line="68">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessOptionService.GetOptions(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessPatientDetailService" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">在 'AccessPatientDetailService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetPatientItemByUdid(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="90">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="88">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="84">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="85">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="86">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="94">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="96">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUdid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPatientItemByUid(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="53">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="51">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="47">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="48">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="49">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="57">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="59">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="50">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="52">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="54">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="58">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetPatientItemByUid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetStatisticsInfo(System.Int32,System.Int32,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="141">'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 的圈复杂度为 33。重写或重构该方法，以便将复杂度降低到 25。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="215">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="216">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="217">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="211">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="214">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="230">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfo(int, int, int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetStatisticsInfoByUid(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToDouble(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="124">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfoByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="125">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfoByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="126">由于 'Convert.ToDouble(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfoByUid(int)' 中的此调用替换为对 'Convert.ToDouble(object, IFormatProvider)' 的调用。如果 'Convert.ToDouble(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="122">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfoByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="123">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientDetailService.GetStatisticsInfoByUid(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InsertPatientDetail(Hospital.PatientDetail)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientDetailService.cs" Line="255">在外部可见方法 'AccessPatientDetailService.InsertPatientDetail(PatientDetail)' 中，请在使用参数“patientDetail”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessPatientInfoService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessPatientInfoService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessPatientInfoService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetPatientInfo()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="33">更改 'AccessPatientInfoService.GetPatientInfo()' 中的 'List&lt;PatientInfo&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="49">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfo()' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="48">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfo()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="52">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfo()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPatientInfoByHospiNum(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="112">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByHospiNum(string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPatientInfoById(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="68">在成员 'AccessPatientInfoService.GetPatientInfoById(int)' 中，将参数名称 'id' 改为 'uid'，使其与已在 'IPatientInfoService.GetPatientInfoById(int)' 中声明的标识符匹配。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="82">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoById(int)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="81">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoById(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="85">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoById(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetPatientInfoByUserDet(System.String,System.String,Hospital.ESex,System.Int32,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="123">'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 的圈复杂度为 30。重写或重构该方法，以便将复杂度降低到 25。</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="123">更改 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'List&lt;PatientInfo&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="0#" TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="123">在成员 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中，将参数名称 'hNum' 改为 'hospiNum'，使其与已在 'IPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中声明的标识符匹配。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToDateTime(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="201">由于 'Convert.ToDateTime(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToDateTime(object, IFormatProvider)' 的调用。如果 'Convert.ToDateTime(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="177">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="200">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="204">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="185">由于 'Convert.ToInt32(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToInt32(string, IFormatProvider)' 的调用。如果 'Convert.ToInt32(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="186">由于 'Convert.ToInt32(string)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的此调用替换为对 'Convert.ToInt32(string, IFormatProvider)' 的调用。如果 'Convert.ToInt32(string, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="126">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="126">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="126">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="126">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="154">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="165">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="165">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="165">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="165">使用“String.IsNullOrEmpty”调用来替换 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中的 'string.operator !=(string, string)' 调用。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="128">在外部可见方法 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中，请在使用参数“hNum”之前先对其进行验证。</Issue>
+            </Message>
+            <Message Id="1" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="132">在外部可见方法 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中，请在使用参数“uName”之前先对其进行验证。</Issue>
+            </Message>
+            <Message Id="4" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="144">在外部可见方法 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中，请在使用参数“bAge”之前先对其进行验证。</Issue>
+            </Message>
+            <Message Id="5" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="144">在外部可见方法 'AccessPatientInfoService.GetPatientInfoByUserDet(string, string, ESex, int, string, string)' 中，请在使用参数“eAge”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InsertPatientInfo(Hospital.PatientInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="225">在外部可见方法 'AccessPatientInfoService.InsertPatientInfo(PatientInfo)' 中，请在使用参数“patientInfo”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UpdatePatientInfo(Hospital.PatientInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessPatientInfoService.cs" Line="248">在外部可见方法 'AccessPatientInfoService.UpdatePatientInfo(PatientInfo)' 中，请在使用参数“patientInfo”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessQuestionService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessQuestionService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessQuestionService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetQuestion(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessQuestionService.cs" Line="74">修改 'AccessQuestionService.GetQuestion(int)' 以便捕捉比 'Exception' 更具体的异常，或者再次引发该异常。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessQuestionService.cs" Line="64">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessQuestionService.GetQuestion(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessQuestionService.cs" Line="65">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessQuestionService.GetQuestion(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessQuestionService.cs" Line="66">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessQuestionService.GetQuestion(int)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessQuestionService.cs" Line="67">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessQuestionService.GetQuestion(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessTestGroupService" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">在 'AccessTestGroupService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetAllTestGroupCnt()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestGroupService.cs" Line="63">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestGroupService.GetAllTestGroupCnt()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetTestGroup()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestGroupService.cs" Line="85">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestGroupService.GetTestGroup()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestGroupService.cs" Line="86">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestGroupService.GetTestGroup()' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetTestGroupBygid(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestGroupService.cs" Line="109">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestGroupService.GetTestGroupBygid(int)' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetTestGroupCnt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestGroupService.cs" Line="44">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestGroupService.GetTestGroupCnt(string)' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="AccessTestService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="DependsOnFix">
+           <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">在 'AccessTestService' 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  'OleDbConnection'。如果以前提供过 'AccessTestService'，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetTestByItem()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="95">更改 'AccessTestService.GetTestByItem()' 中的 'List&lt;Test&gt;' 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="System.Convert.ToBoolean(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="109">由于 'Convert.ToBoolean(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToBoolean(object, IFormatProvider)' 的调用。如果 'Convert.ToBoolean(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="110">由于 'Convert.ToBoolean(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToBoolean(object, IFormatProvider)' 的调用。如果 'Convert.ToBoolean(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="111">由于 'Convert.ToBoolean(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToBoolean(object, IFormatProvider)' 的调用。如果 'Convert.ToBoolean(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="106">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="108">由于 'Convert.ToInt32(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToInt32(object, IFormatProvider)' 的调用。如果 'Convert.ToInt32(object, IFormatProvider)' 的结果将基于用户的输入，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+            <Message Id="System.Convert.ToString(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-04-06 08:07:26Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="f:\project\C#\Hospital\HospitalDALAccess\Access" File="AccessTestService.cs" Line="107">由于 'Convert.ToString(object)' 的行为可能会因当前用户的区域设置不同而不同，请将 'AccessTestService.GetTestByItem()' 中的此调用替换为对 'Convert.ToString(object, IFormatProvider)' 的调用。如果要向用户显示 'Convert.ToString(object, IFormatProvider)' 的结果，请指定 'CultureInfo.CurrentCulture' 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 'CultureInfo.InvariantCulture'。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>程序集应具有有效的强名称</Name>
+   <Description>程序集没有强名称，强名称无效，或者强名称只有经过计算机配置后才有效。不应部署处于这种状态的程序集。出现这种情况最常见原因有: 1) 对程序集进行签名后，修改了该程序集的内容；2) 签名过程失败；3) 延迟了程序集签名；4) 存在一个允许检查通过(原本不应通过)的注册表项。</Description>
+   <Resolution Name="NoStrongName">用强名称密钥对 {0} 进行签名。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>避免过度复杂</Name>
+   <Description>过于复杂的方法实现会增加理解和维护代码的难度。</Description>
+   <Resolution Name="Default">{0} 的圈复杂度为 {1}。重写或重构该方法，以便将复杂度降低到 {2}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>避免使用类型极少的命名空间</Name>
+   <Description>命名空间一般应具有五个以上的类型。</Description>
+   <Resolution Name="Default">考虑将“{0}”中定义的类型与另一个命名空间合并。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>不要捕捉一般异常类型</Name>
+   <Description>不应捕捉 Exception 或 SystemException。捕捉一般异常类型会使库用户看不到运行时问题，并会使调试复杂化。您应该仅捕捉自己可以进行适当处理的异常。</Description>
+   <Resolution Name="Default">修改 {0} 以便捕捉比 {1} 更具体的异常，或者再次引发该异常。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>不要公开泛型列表</Name>
+   <Description>不要在对象模型中公开 List&lt;T&gt;。应使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;。List&lt;T&gt; 应通过实现来使用，而不是在对象模型 API 中使用。List&lt;T&gt; 针对性能进行了优化，但代价是需要长期进行版本管理。例如，如果将 List&lt;T&gt; 返回到客户端代码，您将无法再在客户端代码修改集合时收到通知。</Description>
+   <Resolution Name="Default">更改 {1} 中的 {0} 以使用 Collection&lt;T&gt;、ReadOnlyCollection&lt;T&gt; 或 KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>标识符的大小写应当正确</Name>
+   <Description>类型、命名空间和成员标识符应采用 Pascal 大小写格式。参数标识符应采用 Camel 大小写格式。这些标识符内由两个字母组成的首字母缩略词应全部大写，例如，应采用 System.IO，而不是 System.Io。由三个或更多个字母组成的首字母缩略词应采用 Pascal 大小写格式，例如，应采用 System.Xml，而不是 System.XML。Pascal 大小写格式约定每个单词的首字母大写，如 BackColor。Camel 大小写格式约定第一个单词的首字母小写，所有后续单词的首字母都大写，如 backgroundColor。尽管有些由两个字母组成的首字母缩略词习惯采用不完全大写形式，但不能因此而排斥此规则。例如，“DbConnection”很常见，但并不正确，应采用 DBConnection。为了与现有的非托管符号方案兼容，可能需要违反此规则。但一般来说，这些符号在使用它们的程序集之外不可见。</Description>
+   <Resolution Name="Assembly">更正程序集名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Resolution Name="Type">更正类型名称 {1} 中“{0}”的大小写，将其改为“{2}”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>用 CLSCompliantAttribute 标记程序集</Name>
+   <Description>程序集应使用 CLSCompliant 特性显式说明其 ClS 遵从性。没有此特性的程序集不符合 CLS。即使程序集、模块或类型的某些部分不符合 CLS，这些程序集、模块或类型本身也可以是符合 CLS 的。适用下列规则:  1) 如果元素标记为 CLSCompliant，则所有不符合 CLS 的成员都必须有参数设置为 false 的 CLSCompliant 特性。2) 对于每个不符合 CLS 的成员，都必须提供一个相应的符合 CLS 的备选成员。</Description>
+   <Resolution Name="Default">使用 CLSCompliant(true)来标记 {0}，因为它公开外部可见的类型。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="ParameterNamesShouldMatchBaseDeclaration" Category="Microsoft.Naming" CheckId="CA1725">
+   <Name>参数名应与基方法中的声明保持一致</Name>
+   <Description>出于可用性原因，已重写方法中的参数名应与基方法声明中参数名保持一致。</Description>
+   <Resolution Name="Default">在成员 {0} 中，将参数名称 {1} 改为 {2}，使其与已在 {3} 中声明的标识符匹配。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182251.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>指定 IFormatProvider</Name>
+   <Description>如果存在一个采用 IFormatProvider 参数的重载，则应始终调用该重载，而不调用未采用该参数的重载。运行时中的某些方法可以将值与字符串表示形式相互进行转换，并采用一个字符串参数。该参数中包含一个或多个称为格式说明符的字符，用于指示如何对值进行转换。如果格式说明符的含义因区域性而异，则格式设置对象提供在字符串表示形式中使用的实际字符。如果排序和比较行为不得因区域性而改变，请指定 CultureInfo.InvariantCulture，否则，请指定 CultureInfo.CurrentCulture。</Description>
+   <Resolution Name="IFormatProviderAlternate">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果 {2} 的结果将基于用户的输入，请指定 {3} 作为“IFormatProvider”参数。或者，如果此结果将基于由软件存储和访问的输入(例如，当从磁盘或数据库加载此结果时)，则指定 {4}。</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果要向用户显示 {2} 的结果，请指定 {3} 作为“IFormatProvider”参数。或者，如果软件将存储和访问此结果(例如，当将此结果保留到磁盘或数据库中时)，则指定 {4}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820">
+   <Name>使用字符串长度测试是否有空字符串</Name>
+   <Description>若要测试是否有空字符串，请检查 String.Length 是否等于零。对于如 "".Equals(someString) 和 String.Empty.Equals(someString) 之类的构造，其效率低于字符串长度测试。请使用 someString.Length == 0 检查来替换它们。</Description>
+   <Resolution Name="IsNullOrEmpty">使用“String.IsNullOrEmpty”调用来替换 {1} 中的 {0} 调用。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182279.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>具有可释放字段的类型应该是可释放的</Name>
+   <Description>声明可释放成员的类型也应实现 IDisposable。如果该类型没有任何非托管资源，请不要在其上实现终结器。</Description>
+   <Resolution Name="DependsOnFix">在 {0} 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  {1}。如果以前提供过 {0}，对于现有使用者来说，向此类型添加用于实现 IDisposable 的新成员属于重大更改。</Resolution>
+   <Resolution Name="NonBreaking">在 {0} 上实现 IDisposable，因为它创建下列 IDisposable 类型的成员:  {1}。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>验证公共方法的参数</Name>
+   <Description>应检查传递给外部可见方法的所有引用参数是否为 Null (在 VB 中为 Nothing)。如果适用，在参数为 null 时，引发 System.ArgumentNullException。</Description>
+   <Resolution Name="Default">在外部可见方法 {0} 中，请在使用参数“{1}”之前先对其进行验证。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0063" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>* 未能加载规则集文件“AllRules.ruleset”或其依赖规则集文件之一。</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

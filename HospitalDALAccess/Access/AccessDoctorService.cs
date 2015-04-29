@@ -106,7 +106,7 @@ namespace Hospital.Access
             List<Doctor> list = null;
             try
             {
-                string sql = "Select id,userName,[passWord],[rule],oid from tbl_doctor order by id desc";
+                string sql = "Select id,userName,[passWord],[rule],A.oid from tbl_doctor as A inner join tbl_office as B on A.oid=B.oId order by id desc";
                 
                 con.Open();
                 using (OleDbCommand cmd = new OleDbCommand(sql, con))

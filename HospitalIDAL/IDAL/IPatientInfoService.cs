@@ -25,5 +25,6 @@ namespace Hospital
         List<PatientInfo> GetPatientInfoByUserDet(string hospiNum, string uName, ESex uSex, int uTestGroup, string bAge, string eAge);//条件查找患者基本信息，含模糊查找
         int InsertPatientInfo(PatientInfo patientInfo);//插入患者基本信息
         int UpdatePatientInfo(PatientInfo patientInfo);//修改患者基本信息
+        int DeletePatientInfo(int uid);//删除患者基本信息
     }
 }

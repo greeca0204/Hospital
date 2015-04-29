@@ -915,5 +915,30 @@ namespace Hospital
             }
             finally { }
         }
+
+        private void DelBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int uid = ((PatientInfo)this.dgvPatientInfo.CurrentRow.DataBoundItem).Uid;
+                int rs = patientInfoManager.DeletePatientInfo(uid);
+                if (rs != 0)
+                {
+                    MessageBox.Show("删除成功！");
+                    RefreshPatientInfoData(); //修改成功后，刷新表格。
+                }
+                else
+                {
+                    MessageBox.Show("删除失败！");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("删除失败！数据库异常！");
+            }
+            finally { }
+             
+        }
     }
 }

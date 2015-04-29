@@ -241,10 +241,11 @@ namespace Hospital.Access
         public int UpdatePatientInfo(PatientInfo patientInfo) 
         {
             int rs = 0;
-            string sql = "update tbl_patientInfo set userName=@username,sex=@sex,brithday=@brithday,tel=@tel,address=@address,testGroup=@testGroup,AD=@aD,ONum=@oNum where uid=@uid";
+            string sql = "update tbl_patientInfo set hospiNum=@hospiNum,userName=@username,sex=@sex,brithday=@brithday,tel=@tel,address=@address,testGroup=@testGroup,AD=@aD,ONum=@oNum where uid=@uid";
             con.Open();
             using (OleDbCommand cmd = new OleDbCommand(sql, con))
             {
+                cmd.Parameters.AddWithValue("@hospiNum", patientInfo.HospiNum);
                 cmd.Parameters.AddWithValue("@username", patientInfo.UserName);
                 cmd.Parameters.AddWithValue("@sex", patientInfo.Sex);
                 cmd.Parameters.AddWithValue("@brithday", patientInfo.Brithday);
@@ -257,6 +258,31 @@ namespace Hospital.Access
                 rs = cmd.ExecuteNonQuery();
             }
             con.Close();
+            return rs;
+        }
+        
+        //删除患者基本信息
+        public int DeletePatientInfo(int uid)
+        {
+            int rs = 0;
+            try
+            {
+                string sql = "delete from tbl_patientInfo where uid=@uid";
+                con.Open();
+                using (OleDbCommand cmd = new OleDbCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@uid", uid);
+                    rs = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+            finally
+            {
+                con.Close();
+            }
             return rs;
         }
     }

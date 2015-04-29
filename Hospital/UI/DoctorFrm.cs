@@ -114,16 +114,23 @@ namespace Hospital
             try
             {
                 int id = ((Doctor)this.dgvDoctor.CurrentRow.DataBoundItem).Id;
-                int rs = loginManager.DeleteDoctorInfo(id);
-                if (rs != 0)
-                {
-                    MessageBox.Show("删除成功！");
-                    RefreshData();//修改成功后，刷新表格。
+                int rs = 0;
+                if (id != 1){
+                    rs = loginManager.DeleteDoctorInfo(id);
+                    if (rs != 0)
+                    {
+                        MessageBox.Show("删除成功！");
+                        RefreshData();//修改成功后，刷新表格。
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除失败！");
+                    }
+                }        
+                else{
+                    MessageBox.Show("不能删除管理员账号！");
                 }
-                else
-                {
-                    MessageBox.Show("删除失败！");
-                }
+                
             }
             catch (Exception ex)
             {

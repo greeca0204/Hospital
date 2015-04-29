@@ -68,7 +68,6 @@
             this.txtStandingRs = new System.Windows.Forms.TextBox();
             this.txtBreathRs = new System.Windows.Forms.TextBox();
             this.txtRestingRs = new System.Windows.Forms.TextBox();
-            this.btnResult = new System.Windows.Forms.Button();
             this.txtPositionParasympathetic = new System.Windows.Forms.TextBox();
             this.txtPositionAutonomicNerves = new System.Windows.Forms.TextBox();
             this.txtValsalvaParasympathetic = new System.Windows.Forms.TextBox();
@@ -129,10 +128,10 @@
             this.gopResult.Controls.Add(this.dgvHeartRate);
             this.gopResult.Location = new System.Drawing.Point(12, 70);
             this.gopResult.Name = "gopResult";
-            this.gopResult.Size = new System.Drawing.Size(853, 202);
+            this.gopResult.Size = new System.Drawing.Size(785, 202);
             this.gopResult.TabIndex = 3;
             this.gopResult.TabStop = false;
-            this.gopResult.Text = "心率异常指标结果";
+            this.gopResult.Text = "心率变异结果指标";
             // 
             // dgvHeartRate
             // 
@@ -162,7 +161,7 @@
             this.dgvHeartRate.Name = "dgvHeartRate";
             this.dgvHeartRate.ReadOnly = true;
             this.dgvHeartRate.RowTemplate.Height = 23;
-            this.dgvHeartRate.Size = new System.Drawing.Size(838, 172);
+            this.dgvHeartRate.Size = new System.Drawing.Size(770, 172);
             this.dgvHeartRate.TabIndex = 0;
             this.dgvHeartRate.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHeartRate_CellClick);
             // 
@@ -289,7 +288,7 @@
             // 
             this.lblslylzs.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblslylzs.AutoSize = true;
-            this.lblslylzs.Location = new System.Drawing.Point(248, 221);
+            this.lblslylzs.Location = new System.Drawing.Point(214, 221);
             this.lblslylzs.Name = "lblslylzs";
             this.lblslylzs.Size = new System.Drawing.Size(161, 12);
             this.lblslylzs.TabIndex = 0;
@@ -299,7 +298,7 @@
             // 
             this.lblxlylzs.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblxlylzs.AutoSize = true;
-            this.lblxlylzs.Location = new System.Drawing.Point(541, 223);
+            this.lblxlylzs.Location = new System.Drawing.Point(507, 223);
             this.lblxlylzs.Name = "lblxlylzs";
             this.lblxlylzs.Size = new System.Drawing.Size(161, 12);
             this.lblxlylzs.TabIndex = 2;
@@ -309,7 +308,7 @@
             // 
             this.lblzwsjgnjc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblzwsjgnjc.AutoSize = true;
-            this.lblzwsjgnjc.Location = new System.Drawing.Point(49, 23);
+            this.lblzwsjgnjc.Location = new System.Drawing.Point(15, 23);
             this.lblzwsjgnjc.Name = "lblzwsjgnjc";
             this.lblzwsjgnjc.Size = new System.Drawing.Size(233, 12);
             this.lblzwsjgnjc.TabIndex = 6;
@@ -338,7 +337,6 @@
             this.gopHeartRate.Controls.Add(this.txtStandingRs);
             this.gopHeartRate.Controls.Add(this.txtBreathRs);
             this.gopHeartRate.Controls.Add(this.txtRestingRs);
-            this.gopHeartRate.Controls.Add(this.btnResult);
             this.gopHeartRate.Controls.Add(this.txtPositionParasympathetic);
             this.gopHeartRate.Controls.Add(this.txtPositionAutonomicNerves);
             this.gopHeartRate.Controls.Add(this.txtValsalvaParasympathetic);
@@ -384,16 +382,15 @@
             this.gopHeartRate.Controls.Add(this.lblslylzs);
             this.gopHeartRate.Location = new System.Drawing.Point(12, 278);
             this.gopHeartRate.Name = "gopHeartRate";
-            this.gopHeartRate.Size = new System.Drawing.Size(853, 684);
+            this.gopHeartRate.Size = new System.Drawing.Size(785, 684);
             this.gopHeartRate.TabIndex = 4;
             this.gopHeartRate.TabStop = false;
-            this.gopHeartRate.Text = "添加修改";
             // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(390, 412);
+            this.label10.Location = new System.Drawing.Point(356, 412);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 12);
             this.label10.TabIndex = 75;
@@ -403,7 +400,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(657, 412);
+            this.label9.Location = new System.Drawing.Point(623, 412);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(89, 12);
             this.label9.TabIndex = 75;
@@ -413,7 +410,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 570);
+            this.label8.Location = new System.Drawing.Point(14, 570);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 74;
@@ -423,7 +420,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 412);
+            this.label7.Location = new System.Drawing.Point(84, 412);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 12);
             this.label7.TabIndex = 73;
@@ -433,7 +430,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(651, 331);
+            this.label6.Location = new System.Drawing.Point(617, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 12);
             this.label6.TabIndex = 72;
@@ -443,7 +440,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(384, 331);
+            this.label5.Location = new System.Drawing.Point(350, 331);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 12);
             this.label5.TabIndex = 71;
@@ -453,7 +450,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 331);
+            this.label4.Location = new System.Drawing.Point(54, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(155, 12);
             this.label4.TabIndex = 70;
@@ -463,7 +460,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(657, 251);
+            this.label3.Location = new System.Drawing.Point(623, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 12);
             this.label3.TabIndex = 69;
@@ -473,7 +470,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(390, 250);
+            this.label2.Location = new System.Drawing.Point(356, 250);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 12);
             this.label2.TabIndex = 68;
@@ -482,7 +479,7 @@
             // txtMsiRs
             // 
             this.txtMsiRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMsiRs.Location = new System.Drawing.Point(574, 427);
+            this.txtMsiRs.Location = new System.Drawing.Point(540, 427);
             this.txtMsiRs.Multiline = true;
             this.txtMsiRs.Name = "txtMsiRs";
             this.txtMsiRs.Size = new System.Drawing.Size(256, 63);
@@ -491,7 +488,7 @@
             // txtPsiRs
             // 
             this.txtPsiRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPsiRs.Location = new System.Drawing.Point(312, 427);
+            this.txtPsiRs.Location = new System.Drawing.Point(278, 427);
             this.txtPsiRs.Multiline = true;
             this.txtPsiRs.Name = "txtPsiRs";
             this.txtPsiRs.Size = new System.Drawing.Size(256, 63);
@@ -500,7 +497,7 @@
             // txtDdiRs
             // 
             this.txtDdiRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDdiRs.Location = new System.Drawing.Point(574, 346);
+            this.txtDdiRs.Location = new System.Drawing.Point(540, 346);
             this.txtDdiRs.Multiline = true;
             this.txtDdiRs.Name = "txtDdiRs";
             this.txtDdiRs.Size = new System.Drawing.Size(256, 63);
@@ -509,7 +506,7 @@
             // txtEeiRs
             // 
             this.txtEeiRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEeiRs.Location = new System.Drawing.Point(312, 346);
+            this.txtEeiRs.Location = new System.Drawing.Point(278, 346);
             this.txtEeiRs.Multiline = true;
             this.txtEeiRs.Name = "txtEeiRs";
             this.txtEeiRs.Size = new System.Drawing.Size(256, 63);
@@ -518,7 +515,7 @@
             // txtDiaResult
             // 
             this.txtDiaResult.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDiaResult.Location = new System.Drawing.Point(120, 508);
+            this.txtDiaResult.Location = new System.Drawing.Point(86, 508);
             this.txtDiaResult.Multiline = true;
             this.txtDiaResult.Name = "txtDiaResult";
             this.txtDiaResult.Size = new System.Drawing.Size(711, 138);
@@ -527,7 +524,7 @@
             // txtDeiRs
             // 
             this.txtDeiRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDeiRs.Location = new System.Drawing.Point(50, 427);
+            this.txtDeiRs.Location = new System.Drawing.Point(16, 427);
             this.txtDeiRs.Multiline = true;
             this.txtDeiRs.Name = "txtDeiRs";
             this.txtDeiRs.Size = new System.Drawing.Size(256, 63);
@@ -536,7 +533,7 @@
             // txtValsalvaRs
             // 
             this.txtValsalvaRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtValsalvaRs.Location = new System.Drawing.Point(574, 265);
+            this.txtValsalvaRs.Location = new System.Drawing.Point(540, 265);
             this.txtValsalvaRs.Multiline = true;
             this.txtValsalvaRs.Name = "txtValsalvaRs";
             this.txtValsalvaRs.Size = new System.Drawing.Size(256, 63);
@@ -545,7 +542,7 @@
             // txtStandingRs
             // 
             this.txtStandingRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStandingRs.Location = new System.Drawing.Point(50, 346);
+            this.txtStandingRs.Location = new System.Drawing.Point(16, 346);
             this.txtStandingRs.Multiline = true;
             this.txtStandingRs.Name = "txtStandingRs";
             this.txtStandingRs.Size = new System.Drawing.Size(256, 63);
@@ -554,7 +551,7 @@
             // txtBreathRs
             // 
             this.txtBreathRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBreathRs.Location = new System.Drawing.Point(312, 265);
+            this.txtBreathRs.Location = new System.Drawing.Point(278, 265);
             this.txtBreathRs.Multiline = true;
             this.txtBreathRs.Name = "txtBreathRs";
             this.txtBreathRs.Size = new System.Drawing.Size(256, 63);
@@ -563,26 +560,16 @@
             // txtRestingRs
             // 
             this.txtRestingRs.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtRestingRs.Location = new System.Drawing.Point(50, 265);
+            this.txtRestingRs.Location = new System.Drawing.Point(16, 265);
             this.txtRestingRs.Multiline = true;
             this.txtRestingRs.Name = "txtRestingRs";
             this.txtRestingRs.Size = new System.Drawing.Size(256, 63);
             this.txtRestingRs.TabIndex = 67;
             // 
-            // btnResult
-            // 
-            this.btnResult.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnResult.Location = new System.Drawing.Point(333, 652);
-            this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(75, 23);
-            this.btnResult.TabIndex = 66;
-            this.btnResult.Text = "查看结果";
-            this.btnResult.UseVisualStyleBackColor = true;
-            // 
             // txtPositionParasympathetic
             // 
             this.txtPositionParasympathetic.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPositionParasympathetic.Location = new System.Drawing.Point(711, 129);
+            this.txtPositionParasympathetic.Location = new System.Drawing.Point(677, 129);
             this.txtPositionParasympathetic.Name = "txtPositionParasympathetic";
             this.txtPositionParasympathetic.Size = new System.Drawing.Size(121, 21);
             this.txtPositionParasympathetic.TabIndex = 65;
@@ -590,7 +577,7 @@
             // txtPositionAutonomicNerves
             // 
             this.txtPositionAutonomicNerves.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPositionAutonomicNerves.Location = new System.Drawing.Point(417, 132);
+            this.txtPositionAutonomicNerves.Location = new System.Drawing.Point(383, 132);
             this.txtPositionAutonomicNerves.Name = "txtPositionAutonomicNerves";
             this.txtPositionAutonomicNerves.Size = new System.Drawing.Size(121, 21);
             this.txtPositionAutonomicNerves.TabIndex = 64;
@@ -598,7 +585,7 @@
             // txtValsalvaParasympathetic
             // 
             this.txtValsalvaParasympathetic.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtValsalvaParasympathetic.Location = new System.Drawing.Point(711, 102);
+            this.txtValsalvaParasympathetic.Location = new System.Drawing.Point(677, 102);
             this.txtValsalvaParasympathetic.Name = "txtValsalvaParasympathetic";
             this.txtValsalvaParasympathetic.Size = new System.Drawing.Size(121, 21);
             this.txtValsalvaParasympathetic.TabIndex = 63;
@@ -606,7 +593,7 @@
             // txtValsalvaAutonomicNerves
             // 
             this.txtValsalvaAutonomicNerves.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtValsalvaAutonomicNerves.Location = new System.Drawing.Point(417, 104);
+            this.txtValsalvaAutonomicNerves.Location = new System.Drawing.Point(383, 104);
             this.txtValsalvaAutonomicNerves.Name = "txtValsalvaAutonomicNerves";
             this.txtValsalvaAutonomicNerves.Size = new System.Drawing.Size(121, 21);
             this.txtValsalvaAutonomicNerves.TabIndex = 62;
@@ -614,7 +601,7 @@
             // txtBreathParasympathetic
             // 
             this.txtBreathParasympathetic.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBreathParasympathetic.Location = new System.Drawing.Point(711, 75);
+            this.txtBreathParasympathetic.Location = new System.Drawing.Point(677, 75);
             this.txtBreathParasympathetic.Name = "txtBreathParasympathetic";
             this.txtBreathParasympathetic.Size = new System.Drawing.Size(121, 21);
             this.txtBreathParasympathetic.TabIndex = 61;
@@ -622,7 +609,7 @@
             // txtBreathAutonomicNerves
             // 
             this.txtBreathAutonomicNerves.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBreathAutonomicNerves.Location = new System.Drawing.Point(417, 77);
+            this.txtBreathAutonomicNerves.Location = new System.Drawing.Point(383, 77);
             this.txtBreathAutonomicNerves.Name = "txtBreathAutonomicNerves";
             this.txtBreathAutonomicNerves.Size = new System.Drawing.Size(121, 21);
             this.txtBreathAutonomicNerves.TabIndex = 60;
@@ -630,7 +617,7 @@
             // txtStaticParasympathetic
             // 
             this.txtStaticParasympathetic.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStaticParasympathetic.Location = new System.Drawing.Point(711, 46);
+            this.txtStaticParasympathetic.Location = new System.Drawing.Point(677, 46);
             this.txtStaticParasympathetic.Name = "txtStaticParasympathetic";
             this.txtStaticParasympathetic.Size = new System.Drawing.Size(121, 21);
             this.txtStaticParasympathetic.TabIndex = 59;
@@ -638,7 +625,7 @@
             // txtStaticAutonomicNerves
             // 
             this.txtStaticAutonomicNerves.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStaticAutonomicNerves.Location = new System.Drawing.Point(417, 47);
+            this.txtStaticAutonomicNerves.Location = new System.Drawing.Point(383, 47);
             this.txtStaticAutonomicNerves.Name = "txtStaticAutonomicNerves";
             this.txtStaticAutonomicNerves.Size = new System.Drawing.Size(121, 21);
             this.txtStaticAutonomicNerves.TabIndex = 58;
@@ -646,7 +633,7 @@
             // txtSI
             // 
             this.txtSI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSI.Location = new System.Drawing.Point(710, 189);
+            this.txtSI.Location = new System.Drawing.Point(676, 189);
             this.txtSI.Name = "txtSI";
             this.txtSI.Size = new System.Drawing.Size(120, 21);
             this.txtSI.TabIndex = 57;
@@ -654,7 +641,7 @@
             // txtDEI
             // 
             this.txtDEI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDEI.Location = new System.Drawing.Point(417, 190);
+            this.txtDEI.Location = new System.Drawing.Point(383, 190);
             this.txtDEI.Name = "txtDEI";
             this.txtDEI.Size = new System.Drawing.Size(120, 21);
             this.txtDEI.TabIndex = 56;
@@ -662,7 +649,7 @@
             // txtDDI
             // 
             this.txtDDI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDDI.Location = new System.Drawing.Point(711, 156);
+            this.txtDDI.Location = new System.Drawing.Point(677, 156);
             this.txtDDI.Name = "txtDDI";
             this.txtDDI.Size = new System.Drawing.Size(121, 21);
             this.txtDDI.TabIndex = 55;
@@ -670,7 +657,7 @@
             // txtEEI
             // 
             this.txtEEI.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEEI.Location = new System.Drawing.Point(417, 163);
+            this.txtEEI.Location = new System.Drawing.Point(383, 163);
             this.txtEEI.Name = "txtEEI";
             this.txtEEI.Size = new System.Drawing.Size(121, 21);
             this.txtEEI.TabIndex = 54;
@@ -678,7 +665,7 @@
             // txtMentalPressure
             // 
             this.txtMentalPressure.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMentalPressure.Location = new System.Drawing.Point(710, 220);
+            this.txtMentalPressure.Location = new System.Drawing.Point(676, 220);
             this.txtMentalPressure.Name = "txtMentalPressure";
             this.txtMentalPressure.Size = new System.Drawing.Size(121, 21);
             this.txtMentalPressure.TabIndex = 53;
@@ -686,7 +673,7 @@
             // txtPhysiologicalPressure
             // 
             this.txtPhysiologicalPressure.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPhysiologicalPressure.Location = new System.Drawing.Point(416, 217);
+            this.txtPhysiologicalPressure.Location = new System.Drawing.Point(382, 217);
             this.txtPhysiologicalPressure.Name = "txtPhysiologicalPressure";
             this.txtPhysiologicalPressure.Size = new System.Drawing.Size(121, 21);
             this.txtPhysiologicalPressure.TabIndex = 52;
@@ -694,7 +681,7 @@
             // txtdates
             // 
             this.txtdates.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtdates.Location = new System.Drawing.Point(416, 20);
+            this.txtdates.Location = new System.Drawing.Point(382, 20);
             this.txtdates.Name = "txtdates";
             this.txtdates.Size = new System.Drawing.Size(121, 21);
             this.txtdates.TabIndex = 49;
@@ -703,7 +690,7 @@
             // 
             this.lblTestDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTestDate.AutoSize = true;
-            this.lblTestDate.Location = new System.Drawing.Point(355, 23);
+            this.lblTestDate.Location = new System.Drawing.Point(321, 23);
             this.lblTestDate.Name = "lblTestDate";
             this.lblTestDate.Size = new System.Drawing.Size(65, 12);
             this.lblTestDate.TabIndex = 47;
@@ -712,7 +699,7 @@
             // btnImportXML
             // 
             this.btnImportXML.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnImportXML.Location = new System.Drawing.Point(188, 653);
+            this.btnImportXML.Location = new System.Drawing.Point(190, 653);
             this.btnImportXML.Name = "btnImportXML";
             this.btnImportXML.Size = new System.Drawing.Size(138, 23);
             this.btnImportXML.TabIndex = 46;
@@ -723,7 +710,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDelete.Location = new System.Drawing.Point(578, 653);
+            this.btnDelete.Location = new System.Drawing.Point(500, 653);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 45;
@@ -735,7 +722,7 @@
             // 
             this.lblxlbyfx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblxlbyfx.AutoSize = true;
-            this.lblxlbyfx.Location = new System.Drawing.Point(49, 221);
+            this.lblxlbyfx.Location = new System.Drawing.Point(15, 221);
             this.lblxlbyfx.Name = "lblxlbyfx";
             this.lblxlbyfx.Size = new System.Drawing.Size(161, 12);
             this.lblxlbyfx.TabIndex = 42;
@@ -744,7 +731,7 @@
             // btnReturn
             // 
             this.btnReturn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnReturn.Location = new System.Drawing.Point(659, 653);
+            this.btnReturn.Location = new System.Drawing.Point(581, 653);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(75, 23);
             this.btnReturn.TabIndex = 41;
@@ -755,7 +742,7 @@
             // btnChange
             // 
             this.btnChange.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnChange.Location = new System.Drawing.Point(497, 653);
+            this.btnChange.Location = new System.Drawing.Point(419, 653);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 22);
             this.btnChange.TabIndex = 40;
@@ -766,7 +753,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAdd.Location = new System.Drawing.Point(416, 653);
+            this.btnAdd.Location = new System.Drawing.Point(338, 653);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 22);
             this.btnAdd.TabIndex = 39;
@@ -778,7 +765,7 @@
             // 
             this.lbljgsjzsshx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbljgsjzsshx.AutoSize = true;
-            this.lbljgsjzsshx.Location = new System.Drawing.Point(320, 81);
+            this.lbljgsjzsshx.Location = new System.Drawing.Point(286, 81);
             this.lbljgsjzsshx.Name = "lbljgsjzsshx";
             this.lbljgsjzsshx.Size = new System.Drawing.Size(89, 12);
             this.lbljgsjzsshx.TabIndex = 37;
@@ -788,7 +775,7 @@
             // 
             this.lblfjgsjzstwgb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfjgsjzstwgb.AutoSize = true;
-            this.lblfjgsjzstwgb.Location = new System.Drawing.Point(602, 138);
+            this.lblfjgsjzstwgb.Location = new System.Drawing.Point(568, 138);
             this.lblfjgsjzstwgb.Name = "lblfjgsjzstwgb";
             this.lblfjgsjzstwgb.Size = new System.Drawing.Size(101, 12);
             this.lblfjgsjzstwgb.TabIndex = 28;
@@ -798,7 +785,7 @@
             // 
             this.lbljgsjzstwgb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbljgsjzstwgb.AutoSize = true;
-            this.lbljgsjzstwgb.Location = new System.Drawing.Point(320, 138);
+            this.lbljgsjzstwgb.Location = new System.Drawing.Point(286, 138);
             this.lbljgsjzstwgb.Name = "lbljgsjzstwgb";
             this.lbljgsjzstwgb.Size = new System.Drawing.Size(89, 12);
             this.lbljgsjzstwgb.TabIndex = 27;
@@ -808,7 +795,7 @@
             // 
             this.lbltwgb.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbltwgb.AutoSize = true;
-            this.lbltwgb.Location = new System.Drawing.Point(49, 138);
+            this.lbltwgb.Location = new System.Drawing.Point(15, 138);
             this.lbltwgb.Name = "lbltwgb";
             this.lbltwgb.Size = new System.Drawing.Size(155, 12);
             this.lbltwgb.TabIndex = 26;
@@ -818,7 +805,7 @@
             // 
             this.lblfjgsjzsvalsalva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfjgsjzsvalsalva.AutoSize = true;
-            this.lblfjgsjzsvalsalva.Location = new System.Drawing.Point(602, 105);
+            this.lblfjgsjzsvalsalva.Location = new System.Drawing.Point(568, 105);
             this.lblfjgsjzsvalsalva.Name = "lblfjgsjzsvalsalva";
             this.lblfjgsjzsvalsalva.Size = new System.Drawing.Size(101, 12);
             this.lblfjgsjzsvalsalva.TabIndex = 25;
@@ -828,7 +815,7 @@
             // 
             this.lbljgsjzsvalsalva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbljgsjzsvalsalva.AutoSize = true;
-            this.lbljgsjzsvalsalva.Location = new System.Drawing.Point(320, 109);
+            this.lbljgsjzsvalsalva.Location = new System.Drawing.Point(286, 109);
             this.lbljgsjzsvalsalva.Name = "lbljgsjzsvalsalva";
             this.lbljgsjzsvalsalva.Size = new System.Drawing.Size(89, 12);
             this.lbljgsjzsvalsalva.TabIndex = 24;
@@ -838,7 +825,7 @@
             // 
             this.lblvalsalva.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblvalsalva.AutoSize = true;
-            this.lblvalsalva.Location = new System.Drawing.Point(49, 109);
+            this.lblvalsalva.Location = new System.Drawing.Point(15, 109);
             this.lblvalsalva.Name = "lblvalsalva";
             this.lblvalsalva.Size = new System.Drawing.Size(89, 12);
             this.lblvalsalva.TabIndex = 23;
@@ -848,7 +835,7 @@
             // 
             this.lblfjgsjzsshx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfjgsjzsshx.AutoSize = true;
-            this.lblfjgsjzsshx.Location = new System.Drawing.Point(602, 78);
+            this.lblfjgsjzsshx.Location = new System.Drawing.Point(568, 78);
             this.lblfjgsjzsshx.Name = "lblfjgsjzsshx";
             this.lblfjgsjzsshx.Size = new System.Drawing.Size(101, 12);
             this.lblfjgsjzsshx.TabIndex = 22;
@@ -858,7 +845,7 @@
             // 
             this.lblshjdz.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblshjdz.AutoSize = true;
-            this.lblshjdz.Location = new System.Drawing.Point(49, 78);
+            this.lblshjdz.Location = new System.Drawing.Point(15, 78);
             this.lblshjdz.Name = "lblshjdz";
             this.lblshjdz.Size = new System.Drawing.Size(77, 12);
             this.lblshjdz.TabIndex = 20;
@@ -868,7 +855,7 @@
             // 
             this.lblSI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSI.AutoSize = true;
-            this.lblSI.Location = new System.Drawing.Point(625, 194);
+            this.lblSI.Location = new System.Drawing.Point(591, 194);
             this.lblSI.Name = "lblSI";
             this.lblSI.Size = new System.Drawing.Size(77, 12);
             this.lblSI.TabIndex = 15;
@@ -878,7 +865,7 @@
             // 
             this.lblDEI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDEI.AutoSize = true;
-            this.lblDEI.Location = new System.Drawing.Point(303, 195);
+            this.lblDEI.Location = new System.Drawing.Point(269, 195);
             this.lblDEI.Name = "lblDEI";
             this.lblDEI.Size = new System.Drawing.Size(107, 12);
             this.lblDEI.TabIndex = 14;
@@ -888,7 +875,7 @@
             // 
             this.lblDDI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDDI.AutoSize = true;
-            this.lblDDI.Location = new System.Drawing.Point(596, 165);
+            this.lblDDI.Location = new System.Drawing.Point(562, 165);
             this.lblDDI.Name = "lblDDI";
             this.lblDDI.Size = new System.Drawing.Size(107, 12);
             this.lblDDI.TabIndex = 13;
@@ -898,7 +885,7 @@
             // 
             this.lblEEI.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEEI.AutoSize = true;
-            this.lblEEI.Location = new System.Drawing.Point(304, 166);
+            this.lblEEI.Location = new System.Drawing.Point(270, 166);
             this.lblEEI.Name = "lblEEI";
             this.lblEEI.Size = new System.Drawing.Size(107, 12);
             this.lblEEI.TabIndex = 12;
@@ -908,7 +895,7 @@
             // 
             this.lblwcdmyhjc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblwcdmyhjc.AutoSize = true;
-            this.lblwcdmyhjc.Location = new System.Drawing.Point(49, 163);
+            this.lblwcdmyhjc.Location = new System.Drawing.Point(15, 163);
             this.lblwcdmyhjc.Name = "lblwcdmyhjc";
             this.lblwcdmyhjc.Size = new System.Drawing.Size(215, 12);
             this.lblwcdmyhjc.TabIndex = 11;
@@ -918,7 +905,7 @@
             // 
             this.lblfjgsjzsjx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblfjgsjzsjx.AutoSize = true;
-            this.lblfjgsjzsjx.Location = new System.Drawing.Point(602, 51);
+            this.lblfjgsjzsjx.Location = new System.Drawing.Point(568, 51);
             this.lblfjgsjzsjx.Name = "lblfjgsjzsjx";
             this.lblfjgsjzsjx.Size = new System.Drawing.Size(101, 12);
             this.lblfjgsjzsjx.TabIndex = 9;
@@ -928,7 +915,7 @@
             // 
             this.lbljgsjzsjx.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbljgsjzsjx.AutoSize = true;
-            this.lbljgsjzsjx.Location = new System.Drawing.Point(320, 51);
+            this.lbljgsjzsjx.Location = new System.Drawing.Point(286, 51);
             this.lbljgsjzsjx.Name = "lbljgsjzsjx";
             this.lbljgsjzsjx.Size = new System.Drawing.Size(89, 12);
             this.lbljgsjzsjx.TabIndex = 8;
@@ -938,7 +925,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(136, 250);
+            this.label1.Location = new System.Drawing.Point(102, 250);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 12);
             this.label1.TabIndex = 7;
@@ -948,7 +935,7 @@
             // 
             this.lbljxzt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbljxzt.AutoSize = true;
-            this.lbljxzt.Location = new System.Drawing.Point(49, 51);
+            this.lbljxzt.Location = new System.Drawing.Point(15, 51);
             this.lbljxzt.Name = "lbljxzt";
             this.lbljxzt.Size = new System.Drawing.Size(65, 12);
             this.lbljxzt.TabIndex = 7;
@@ -965,7 +952,7 @@
             this.gopPatientInfo.Controls.Add(this.lblUserName);
             this.gopPatientInfo.Location = new System.Drawing.Point(12, 12);
             this.gopPatientInfo.Name = "gopPatientInfo";
-            this.gopPatientInfo.Size = new System.Drawing.Size(853, 52);
+            this.gopPatientInfo.Size = new System.Drawing.Size(785, 52);
             this.gopPatientInfo.TabIndex = 5;
             this.gopPatientInfo.TabStop = false;
             this.gopPatientInfo.Text = "患者信息";
@@ -974,7 +961,7 @@
             // 
             this.lblAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAge.AutoSize = true;
-            this.lblAge.Location = new System.Drawing.Point(223, 26);
+            this.lblAge.Location = new System.Drawing.Point(189, 26);
             this.lblAge.Name = "lblAge";
             this.lblAge.Size = new System.Drawing.Size(23, 12);
             this.lblAge.TabIndex = 9;
@@ -984,7 +971,7 @@
             // 
             this.lblTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTel.AutoSize = true;
-            this.lblTel.Location = new System.Drawing.Point(726, 26);
+            this.lblTel.Location = new System.Drawing.Point(692, 26);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(23, 12);
             this.lblTel.TabIndex = 8;
@@ -994,7 +981,7 @@
             // 
             this.lblGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblGroup.AutoSize = true;
-            this.lblGroup.Location = new System.Drawing.Point(557, 26);
+            this.lblGroup.Location = new System.Drawing.Point(523, 26);
             this.lblGroup.Name = "lblGroup";
             this.lblGroup.Size = new System.Drawing.Size(35, 12);
             this.lblGroup.TabIndex = 7;
@@ -1004,7 +991,7 @@
             // 
             this.lblSex.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSex.AutoSize = true;
-            this.lblSex.Location = new System.Drawing.Point(380, 26);
+            this.lblSex.Location = new System.Drawing.Point(346, 26);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(23, 12);
             this.lblSex.TabIndex = 6;
@@ -1014,7 +1001,7 @@
             // 
             this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(52, 26);
+            this.lblUserName.Location = new System.Drawing.Point(18, 26);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(29, 12);
             this.lblUserName.TabIndex = 5;
@@ -1117,7 +1104,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colSympathetic4;
         private System.Windows.Forms.DataGridViewTextBoxColumn colParasympathetic4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.TextBox txtRestingRs;
         private System.Windows.Forms.TextBox txtMsiRs;
         private System.Windows.Forms.TextBox txtPsiRs;

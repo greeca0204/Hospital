@@ -24,5 +24,6 @@ namespace Hospital
         int InsertOffice(Office office);//添加科室信息
         int UpdateOffice(Office office);//修改科室信息
         int GetOfficeCnt();//获取科室总数
+        int DeleteOffice(int oid);//删除科室信息
     }
 }

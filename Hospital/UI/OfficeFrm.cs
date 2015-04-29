@@ -117,6 +117,38 @@ namespace Hospital
             finally { }
         }
 
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int oid = ((Office)this.dgvOffice.CurrentRow.DataBoundItem).OId;
+                int rs = 0;
+                if (oid != 4)
+                {
+                    rs = officeManager.DeleteOffice(oid);
+                    if (rs != 0)
+                    {
+                        MessageBox.Show("删除成功！");
+                        RefreshData();//修改成功后，刷新表格。
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除失败！");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("不能删除管理中心！");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+                MessageBox.Show("删除失败！数据库异常！");
+            }
+            finally { }
+        }
+    
         
     }
 }

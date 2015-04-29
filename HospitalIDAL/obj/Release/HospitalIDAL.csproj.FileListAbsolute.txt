@@ -9,6 +9,6 @@ F:\project\C#\Hospital\HospitalIDAL\bin\Release\HospitalIDAL.dll
 F:\project\C#\Hospital\HospitalIDAL\bin\Release\HospitalIDAL.pdb
 F:\project\C#\Hospital\HospitalIDAL\bin\Release\HospitalModel.dll
 F:\project\C#\Hospital\HospitalIDAL\bin\Release\HospitalModel.pdb
-F:\project\C#\Hospital\HospitalIDAL\obj\Release\HospitalIDAL.csprojResolveAssemblyReference.cache
 F:\project\C#\Hospital\HospitalIDAL\obj\Release\HospitalIDAL.dll
 F:\project\C#\Hospital\HospitalIDAL\obj\Release\HospitalIDAL.pdb
+F:\project\C#\Hospital\HospitalIDAL\obj\Release\HospitalIDAL.csprojResolveAssemblyReference.cache

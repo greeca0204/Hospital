@@ -111,4 +111,3 @@ F:\project\C#\Hospital\HospitalModel\bin\Debug\HospitalModel.dll
 F:\project\C#\Hospital\HospitalModel\bin\Debug\HospitalModel.pdb
 F:\project\C#\Hospital\HospitalModel\obj\Debug\HospitalModel.dll
 F:\project\C#\Hospital\HospitalModel\obj\Debug\HospitalModel.pdb
-F:\project\C#\Hospital\HospitalModel\obj\Debug\HospitalModel.csprojResolveAssemblyReference.cache

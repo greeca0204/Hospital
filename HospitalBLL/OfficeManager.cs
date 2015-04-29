@@ -53,5 +53,11 @@ namespace Hospital
         {
             return db.GetOfficeCnt();
         }
+
+        //删除科室信息
+        public int DeleteOffice(int oid)
+        {
+            return db.DeleteOffice(oid);
+        }
     }
 }

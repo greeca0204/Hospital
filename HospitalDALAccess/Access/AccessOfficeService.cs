@@ -129,5 +129,29 @@ namespace Hospital.Access
             con.Close();
             return chNum;
         }
+
+        public int DeleteOffice(int oId)
+        {
+            int rs = 0;
+            try
+            {
+                string sql = "delete from tbl_office where oId=@oId";
+                con.Open();
+                using (OleDbCommand cmd = new OleDbCommand(sql, con))
+                {
+                    cmd.Parameters.AddWithValue("@oId", oId);
+                    rs = cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+            }
+            finally
+            {
+                con.Close();
+            }
+            return rs;
+        }
     }
 }

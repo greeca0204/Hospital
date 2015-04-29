@@ -244,7 +244,7 @@ namespace Hospital
 
                     RadioButton temcheck = new RadioButton();
                     rb[i] = temcheck;
-                    rb[i].Size = new System.Drawing.Size(300, 30);
+                    rb[i].Size = new System.Drawing.Size(1500, 30);
                     rb[i].Font = new Font(rb[i].Font.FontFamily, 14, rb[i].Font.Style);
                     rb[i].Text = oDic[option].Option.ToString() + "." + oDic[option].Title.ToString();
 

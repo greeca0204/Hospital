@@ -3817,7 +3817,7 @@ namespace Hospital
                         //  double variance_xiaoji = 0;
 
                         int num = 0;
-                        double j = 0;
+                        //double j = 0;
                         string str_jiji = "";
                         string str_xiaoji = "";
                         ItemNum = 3;

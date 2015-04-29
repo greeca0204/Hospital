@@ -121,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Location = new System.Drawing.Point(296, 67);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(609, 339);
+            this.groupBox3.Size = new System.Drawing.Size(609, 294);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "测试试题";
@@ -135,13 +135,13 @@
             this.tbTestQuestion.Multiline = true;
             this.tbTestQuestion.Name = "tbTestQuestion";
             this.tbTestQuestion.ReadOnly = true;
-            this.tbTestQuestion.Size = new System.Drawing.Size(597, 313);
+            this.tbTestQuestion.Size = new System.Drawing.Size(597, 268);
             this.tbTestQuestion.TabIndex = 8;
             // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnSubmit.Location = new System.Drawing.Point(313, 306);
+            this.btnSubmit.Location = new System.Drawing.Point(313, 351);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 7;
@@ -152,7 +152,7 @@
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnNext.Location = new System.Drawing.Point(232, 306);
+            this.btnNext.Location = new System.Drawing.Point(232, 351);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 6;
@@ -163,7 +163,7 @@
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBack.Location = new System.Drawing.Point(151, 306);
+            this.btnBack.Location = new System.Drawing.Point(151, 351);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 5;
@@ -181,9 +181,9 @@
             this.groupBox2.Controls.Add(this.btnNext);
             this.groupBox2.Controls.Add(this.btnBack);
             this.groupBox2.Controls.Add(this.flowLayoutPanel);
-            this.groupBox2.Location = new System.Drawing.Point(296, 412);
+            this.groupBox2.Location = new System.Drawing.Point(296, 367);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(609, 347);
+            this.groupBox2.Size = new System.Drawing.Size(609, 392);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "选项";
@@ -191,7 +191,7 @@
             // btnReturn
             // 
             this.btnReturn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnReturn.Location = new System.Drawing.Point(394, 306);
+            this.btnReturn.Location = new System.Drawing.Point(394, 351);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(75, 23);
             this.btnReturn.TabIndex = 9;
@@ -203,10 +203,11 @@
             // 
             this.flowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel.Location = new System.Drawing.Point(6, 20);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(598, 280);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(598, 325);
             this.flowLayoutPanel.TabIndex = 8;
             // 
             // 量表项

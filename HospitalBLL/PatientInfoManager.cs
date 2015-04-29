@@ -64,5 +64,11 @@ namespace Hospital
         {
             return db.UpdatePatientInfo(patientInfo);
         }
+
+        //删除患者基本信息
+        public int DeletePatientInfo(int uid)
+        {
+            return db.DeletePatientInfo(uid);
+        }
     }
 }

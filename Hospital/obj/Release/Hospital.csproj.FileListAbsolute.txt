@@ -40,7 +40,6 @@ F:\project\C#\Hospital\Hospital\bin\Release\HospitalIDAL.dll
 F:\project\C#\Hospital\Hospital\bin\Release\HospitalBLL.pdb
 F:\project\C#\Hospital\Hospital\bin\Release\HospitalModel.pdb
 F:\project\C#\Hospital\Hospital\bin\Release\HospitalIDAL.pdb
-F:\project\C#\Hospital\Hospital\obj\Release\Hospital.csprojResolveAssemblyReference.cache
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.Properties.Resources.resources
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.UsualTestFrm.resources
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.OfficeFrm.resources
@@ -58,3 +57,4 @@ F:\project\C#\Hospital\Hospital\obj\Release\Hospital.MentalTestReportFrm.resourc
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.PatientFrm.resources
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.MentalTestAnalyByPatFrm.resources
 F:\project\C#\Hospital\Hospital\obj\Release\Hospital.csproj.GenerateResource.Cache
+F:\project\C#\Hospital\Hospital\obj\Release\Hospital.csprojResolveAssemblyReference.cache

@@ -88,6 +88,11 @@
             this.btnMentalTestDetail = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvMentalTestResult = new System.Windows.Forms.DataGridView();
+            this.Udid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Testtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TNameItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTestMentalResult = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -112,11 +117,7 @@
             this.txtHeartRateResult = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.Udid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Testtime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TNameItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Score = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DelBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPatientInfo)).BeginInit();
             this.gop1.SuspendLayout();
@@ -398,6 +399,7 @@
             // 
             // gop1
             // 
+            this.gop1.Controls.Add(this.DelBtn);
             this.gop1.Controls.Add(this.btnHeartRecord);
             this.gop1.Controls.Add(this.btnPsyTest);
             this.gop1.Controls.Add(this.btnHeartTest);
@@ -421,7 +423,7 @@
             this.gop1.Controls.Add(this.lblTel);
             this.gop1.Controls.Add(this.lblSex);
             this.gop1.Controls.Add(this.lblUserName);
-            this.gop1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gop1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gop1.Location = new System.Drawing.Point(3, 62);
             this.gop1.Name = "gop1";
             this.gop1.Size = new System.Drawing.Size(544, 241);
@@ -432,7 +434,7 @@
             // btnHeartRecord
             // 
             this.btnHeartRecord.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHeartRecord.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHeartRecord.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnHeartRecord.Location = new System.Drawing.Point(357, 20);
             this.btnHeartRecord.Name = "btnHeartRecord";
             this.btnHeartRecord.Size = new System.Drawing.Size(148, 31);
@@ -444,7 +446,7 @@
             // btnPsyTest
             // 
             this.btnPsyTest.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnPsyTest.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPsyTest.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPsyTest.Location = new System.Drawing.Point(37, 20);
             this.btnPsyTest.Name = "btnPsyTest";
             this.btnPsyTest.Size = new System.Drawing.Size(111, 31);
@@ -456,7 +458,7 @@
             // btnHeartTest
             // 
             this.btnHeartTest.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnHeartTest.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHeartTest.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnHeartTest.Location = new System.Drawing.Point(184, 20);
             this.btnHeartTest.Name = "btnHeartTest";
             this.btnHeartTest.Size = new System.Drawing.Size(136, 31);
@@ -469,7 +471,7 @@
             // 
             this.lblAD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAD.AutoSize = true;
-            this.lblAD.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblAD.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblAD.Location = new System.Drawing.Point(325, 120);
             this.lblAD.Name = "lblAD";
             this.lblAD.Size = new System.Drawing.Size(53, 12);
@@ -480,7 +482,7 @@
             // 
             this.lblONum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblONum.AutoSize = true;
-            this.lblONum.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblONum.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblONum.Location = new System.Drawing.Point(48, 120);
             this.lblONum.Name = "lblONum";
             this.lblONum.Size = new System.Drawing.Size(53, 12);
@@ -491,7 +493,7 @@
             // 
             this.lblHospiNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblHospiNum.AutoSize = true;
-            this.lblHospiNum.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblHospiNum.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblHospiNum.Location = new System.Drawing.Point(37, 97);
             this.lblHospiNum.Name = "lblHospiNum";
             this.lblHospiNum.Size = new System.Drawing.Size(65, 12);
@@ -501,7 +503,7 @@
             // txtAD
             // 
             this.txtAD.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAD.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtAD.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtAD.Location = new System.Drawing.Point(384, 117);
             this.txtAD.Name = "txtAD";
             this.txtAD.Size = new System.Drawing.Size(121, 21);
@@ -510,7 +512,7 @@
             // txtONum
             // 
             this.txtONum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtONum.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtONum.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtONum.Location = new System.Drawing.Point(109, 117);
             this.txtONum.Name = "txtONum";
             this.txtONum.Size = new System.Drawing.Size(138, 21);
@@ -519,7 +521,7 @@
             // txtHospiNum
             // 
             this.txtHospiNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtHospiNum.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtHospiNum.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtHospiNum.Location = new System.Drawing.Point(109, 94);
             this.txtHospiNum.Name = "txtHospiNum";
             this.txtHospiNum.Size = new System.Drawing.Size(138, 21);
@@ -528,8 +530,8 @@
             // btnChange
             // 
             this.btnChange.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnChange.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnChange.Location = new System.Drawing.Point(328, 199);
+            this.btnChange.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnChange.Location = new System.Drawing.Point(250, 198);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(84, 31);
             this.btnChange.TabIndex = 10;
@@ -540,7 +542,7 @@
             // txtUserName
             // 
             this.txtUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUserName.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtUserName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtUserName.Location = new System.Drawing.Point(109, 67);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(138, 21);
@@ -549,7 +551,7 @@
             // datebBrithday
             // 
             this.datebBrithday.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.datebBrithday.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.datebBrithday.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.datebBrithday.Location = new System.Drawing.Point(384, 94);
             this.datebBrithday.Name = "datebBrithday";
             this.datebBrithday.Size = new System.Drawing.Size(121, 21);
@@ -558,7 +560,7 @@
             // AddBtn
             // 
             this.AddBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddBtn.Location = new System.Drawing.Point(418, 199);
+            this.AddBtn.Location = new System.Drawing.Point(340, 198);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(84, 31);
             this.AddBtn.TabIndex = 5;
@@ -569,7 +571,7 @@
             // cmbTestGroup
             // 
             this.cmbTestGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbTestGroup.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbTestGroup.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbTestGroup.FormattingEnabled = true;
             this.cmbTestGroup.Location = new System.Drawing.Point(384, 144);
             this.cmbTestGroup.Name = "cmbTestGroup";
@@ -582,7 +584,7 @@
             this.cmbSex.AutoCompleteCustomSource.AddRange(new string[] {
             "1",
             "0"});
-            this.cmbSex.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbSex.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbSex.FormattingEnabled = true;
             this.cmbSex.Location = new System.Drawing.Point(384, 70);
             this.cmbSex.Name = "cmbSex";
@@ -592,7 +594,7 @@
             // txtAddress
             // 
             this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAddress.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtAddress.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtAddress.Location = new System.Drawing.Point(109, 170);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(396, 21);
@@ -601,7 +603,7 @@
             // txtTel
             // 
             this.txtTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTel.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtTel.Location = new System.Drawing.Point(109, 144);
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(138, 21);
@@ -611,7 +613,7 @@
             // 
             this.lblBrithday.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblBrithday.AutoSize = true;
-            this.lblBrithday.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblBrithday.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblBrithday.Location = new System.Drawing.Point(313, 98);
             this.lblBrithday.Name = "lblBrithday";
             this.lblBrithday.Size = new System.Drawing.Size(65, 12);
@@ -622,7 +624,7 @@
             // 
             this.lblAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblAddress.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblAddress.Location = new System.Drawing.Point(35, 173);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(65, 12);
@@ -633,7 +635,7 @@
             // 
             this.lblTestGroup.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTestGroup.AutoSize = true;
-            this.lblTestGroup.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTestGroup.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTestGroup.Location = new System.Drawing.Point(313, 145);
             this.lblTestGroup.Name = "lblTestGroup";
             this.lblTestGroup.Size = new System.Drawing.Size(65, 12);
@@ -644,7 +646,7 @@
             // 
             this.lblTel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTel.AutoSize = true;
-            this.lblTel.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTel.Location = new System.Drawing.Point(36, 147);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(65, 12);
@@ -655,7 +657,7 @@
             // 
             this.lblSex.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblSex.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblSex.Location = new System.Drawing.Point(313, 70);
             this.lblSex.Name = "lblSex";
             this.lblSex.Size = new System.Drawing.Size(65, 12);
@@ -666,7 +668,7 @@
             // 
             this.lblUserName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblUserName.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblUserName.Location = new System.Drawing.Point(37, 70);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(65, 12);
@@ -776,6 +778,37 @@
             this.dgvMentalTestResult.Size = new System.Drawing.Size(529, 188);
             this.dgvMentalTestResult.TabIndex = 1;
             this.dgvMentalTestResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMentalTest_CellClick);
+            // 
+            // Udid
+            // 
+            this.Udid.DataPropertyName = "Udid";
+            this.Udid.HeaderText = "Udid";
+            this.Udid.Name = "Udid";
+            this.Udid.Visible = false;
+            // 
+            // Testtime
+            // 
+            this.Testtime.DataPropertyName = "Testtime";
+            this.Testtime.HeaderText = "测试时间";
+            this.Testtime.Name = "Testtime";
+            // 
+            // TName
+            // 
+            this.TName.DataPropertyName = "TName";
+            this.TName.HeaderText = "量表名";
+            this.TName.Name = "TName";
+            // 
+            // TNameItem
+            // 
+            this.TNameItem.DataPropertyName = "TNameItem";
+            this.TNameItem.HeaderText = "量表项";
+            this.TNameItem.Name = "TNameItem";
+            // 
+            // Score
+            // 
+            this.Score.DataPropertyName = "Score";
+            this.Score.HeaderText = "得分";
+            this.Score.Name = "Score";
             // 
             // txtTestMentalResult
             // 
@@ -1012,36 +1045,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "结论";
             // 
-            // Udid
+            // DelBtn
             // 
-            this.Udid.DataPropertyName = "Udid";
-            this.Udid.HeaderText = "Udid";
-            this.Udid.Name = "Udid";
-            this.Udid.Visible = false;
-            // 
-            // Testtime
-            // 
-            this.Testtime.DataPropertyName = "Testtime";
-            this.Testtime.HeaderText = "测试时间";
-            this.Testtime.Name = "Testtime";
-            // 
-            // TName
-            // 
-            this.TName.DataPropertyName = "TName";
-            this.TName.HeaderText = "量表名";
-            this.TName.Name = "TName";
-            // 
-            // TNameItem
-            // 
-            this.TNameItem.DataPropertyName = "TNameItem";
-            this.TNameItem.HeaderText = "量表项";
-            this.TNameItem.Name = "TNameItem";
-            // 
-            // Score
-            // 
-            this.Score.DataPropertyName = "Score";
-            this.Score.HeaderText = "得分";
-            this.Score.Name = "Score";
+            this.DelBtn.Location = new System.Drawing.Point(430, 199);
+            this.DelBtn.Name = "DelBtn";
+            this.DelBtn.Size = new System.Drawing.Size(75, 27);
+            this.DelBtn.TabIndex = 16;
+            this.DelBtn.Text = "删除";
+            this.DelBtn.UseVisualStyleBackColor = true;
+            this.DelBtn.Click += new System.EventHandler(this.DelBtn_Click);
             // 
             // PatientFrm
             // 
@@ -1165,5 +1177,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TNameItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Score;
+        private System.Windows.Forms.Button DelBtn;
     }
 }
